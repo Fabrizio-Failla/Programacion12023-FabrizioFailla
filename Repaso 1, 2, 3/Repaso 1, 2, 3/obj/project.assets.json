@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\Repaso 1, 2, 3\\Repaso 1, 2, 3\\Repaso 1, 2, 3.csproj",
-      "projectName": "Repaso 1, 2, 3",
-      "projectPath": "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\Repaso 1, 2, 3\\Repaso 1, 2, 3\\Repaso 1, 2, 3.csproj",
+      "projectUniqueName": "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\Repaso 1, 2, 3\\Repaso 1, 2, 3\\Repaso 1.csproj",
+      "projectName": "Repaso 1",
+      "projectPath": "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\Repaso 1, 2, 3\\Repaso 1, 2, 3\\Repaso 1.csproj",
       "packagesPath": "C:\\Users\\54349\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\Repaso 1, 2, 3\\Repaso 1, 2, 3\\obj\\",
       "projectStyle": "PackageReference",
