@@ -1,0 +1,15 @@
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Repaso 1, 2, 3\Repaso 1, 2, 3\obj\Debug\net6.0\Repaso 1.csproj.AssemblyReference.cache
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Repaso 1, 2, 3\Repaso 1, 2, 3\obj\Debug\net6.0\Repaso 1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Repaso 1, 2, 3\Repaso 1, 2, 3\obj\Debug\net6.0\Repaso 1.AssemblyInfoInputs.cache
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Repaso 1, 2, 3\Repaso 1, 2, 3\obj\Debug\net6.0\Repaso 1.AssemblyInfo.cs
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Repaso 1, 2, 3\Repaso 1, 2, 3\obj\Debug\net6.0\Repaso 1.csproj.CoreCompileInputs.cache
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Repaso 1, 2, 3\Repaso 1, 2, 3\bin\Debug\net6.0\Repaso 1.exe
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Repaso 1, 2, 3\Repaso 1, 2, 3\bin\Debug\net6.0\Repaso 1.deps.json
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Repaso 1, 2, 3\Repaso 1, 2, 3\bin\Debug\net6.0\Repaso 1.runtimeconfig.json
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Repaso 1, 2, 3\Repaso 1, 2, 3\bin\Debug\net6.0\Repaso 1.dll
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Repaso 1, 2, 3\Repaso 1, 2, 3\bin\Debug\net6.0\Repaso 1.pdb
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Repaso 1, 2, 3\Repaso 1, 2, 3\obj\Debug\net6.0\Repaso 1.dll
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Repaso 1, 2, 3\Repaso 1, 2, 3\obj\Debug\net6.0\refint\Repaso 1.dll
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Repaso 1, 2, 3\Repaso 1, 2, 3\obj\Debug\net6.0\Repaso 1.pdb
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Repaso 1, 2, 3\Repaso 1, 2, 3\obj\Debug\net6.0\Repaso 1.genruntimeconfig.cache
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Repaso 1, 2, 3\Repaso 1, 2, 3\obj\Debug\net6.0\ref\Repaso 1.dll
