@@ -1,28 +1,90 @@
 ﻿/*
+ //Este es un ejercicio donde hay un podio de 3 ganadores en una lista de 5 productos, es como un 5 BIS
+int elUno = 0;
+int elDos = 0;
+int elTres = 0;
+string elNombreUno = "";
+string elNombreDos = "";
+string elNombreTres = "";
+
+for (int i = 1; i <= 5; i++)
+{
+    Console.WriteLine("Porfa ingreseme el nombre del pibe ");
+    string nombre = Console.ReadLine();
+
+    Console.WriteLine("Porfa ingreseme cuanto gastó ");
+    int gasto = int.Parse(Console.ReadLine());
+
+
+    if (gasto > elUno)
+    {
+        // Aca es porque llegó un nuevo grandote, uno mayor a todos, tiene que ir primero
+        // Ojo que allá en el fondo aclaran también que podría ser el primero, así que ojo.
+
+        // acá yo subo al primer flaco al palco del mas grande, pero ANTES!! ojo que si había
+        // uno.. no lo puedo matar, tengo que ponerlo en el segundo.
+        // pero ANTES de matar al tercero, ahí tengo que sentar al segundo
+        elTres = elDos;
+        elNombreTres = elNombreDos;
+
+        elDos = elUno;
+        elNombreDos = elNombreUno;
+
+        elUno = gasto;
+        elNombreUno = nombre;
+
+
+    }
+    else
+    {   // acá SI, ya sé que tengo un valor que NO fue primero... pero.. podría ser segundo
+        // podría ser tercero o ninguno !!! ...  
+        if (gasto > elDos)
+        {
+            // SI ESTOY acá es porque este nuevo flaco gastó MENOS que el primero
+            // pero más que el segundo.
+            // eentonces... tengo un nuevo segundo... y un nuevo tercero
+            elTres = elDos;
+            elNombreTres = elNombreDos;
+            elDos = gasto;
+            elNombreDos = nombre;
+
+        }
+        else
+        {
+            if (gasto > elTres)
+            {
+                elTres = gasto;
+                elNombreTres = nombre;
+            }
+        }
+
+    }
+}
+
+Console.WriteLine("El pibe que más gastó 1 fue " + elNombreUno);
+Console.WriteLine("El pibe que más gastó 2 fue " + elNombreDos);
+Console.WriteLine("El pibe que más gastó 3 fue " + elNombreTres);
+*/
+/*
 //Ejercicio 5 for
 //-------------------------------------------------------------------------
 //El usuario ingresa 5 pares de valores con el nombre del cliente
 //y el total gastado, indicar el cliente que gastó más. 
-Dictionary<string, double> datos = new Dictionary<string, double>();
+int elMayorGasto=0;
+string elnombredelmayor = "";
 for (int i = 1; i <= 5; i++)
 {
     Console.WriteLine("Ingrese su nombre:");
-    string? nombre = Console.ReadLine();
+    string nombre = Console.ReadLine();
     Console.WriteLine("Ingrese el total gastado:");
-    double total = double.Parse(Console.ReadLine());
-    datos.Add(nombre, total);
-}
-double mayorValor = 0;
-string nombre_del_mayor =null;
-foreach (KeyValuePair<string, double> par in datos)
-{
-    if (par.Value > mayorValor)
+    int gasto = int.Parse(Console.ReadLine());
+    if(gasto>elMayorGasto)
     {
-        mayorValor = par.Value;
-        nombre_del_mayor = par.Key;
+        elMayorGasto = gasto;
+        elnombredelmayor=nombre;    
     }
 }
-Console.WriteLine("El que gasto mas fue " + nombre_del_mayor + ", con un total gastado de " + mayorValor);
+Console.WriteLine("El que gasto mas fue " + elnombredelmayor + ", con un total gastado de: $" + elMayorGasto);
 */
 
 /*
@@ -99,37 +161,43 @@ Console.WriteLine("La suma de los 5 valores enteros son:"+ suma);
 //total adeudado por el cliente. 
 Console.WriteLine("Ingresar cuantos prodctos comprastes:");
 string cantidadProductos = Console.ReadLine();
+
 int productos = int.Parse(cantidadProductos);
 int cantidadTotal = 0;
-for (int i = 0; i < productos; i++)
+for (int i = 1; i <= productos; i++)
     {
         Console.WriteLine("Ingresar costo del producto");
         string costoProducto = Console.ReadLine();
         int costo = int.Parse(costoProducto); 
-        cantidadTotal += costo;
-       
+        cantidadTotal += costo;     
     }
 Console.WriteLine("total adeudado por el cliente:" + cantidadTotal);
 */
+
 /*
 //---------------------------------------------------------------------
 //EJERCICIO 4 de while
 //Para calcular el total de una factura , el usuario ingresará pares
 //de datos Costo y Total ; cuando se ingrese costo 0 finaliza el ingreso
 //de datos; informar el total adeudado.
-Console.WriteLine("Ingresar datos de costo");
-int conteo = 0;
-string costos = Console.ReadLine();
-int costos_s = int.Parse(costos);
-while (costos_s> 0)
-{
-    Console.WriteLine("ingrsar costos");
-    costos = Console.ReadLine();
-    costos_s = int.Parse(costos);
-    conteo = costos_s + conteo;
-}
-Console.WriteLine("El total de datos ingresados fue:" + conteo);
+Console.WriteLine("Ingresar costo");
+string costo = Console.ReadLine();
+int costoNum = int.Parse(costo);
+int suma = 0;
 
+while (costoNum > 0)
+{
+
+    Console.WriteLine("Poner total");
+    string total = Console.ReadLine();
+    int totalNum = int.Parse(total);
+    suma = suma + (costoNum * totalNum);
+
+    Console.WriteLine("Ingresar el costo");
+    costo = Console.ReadLine();
+    costoNum = int.Parse(costo);
+}
+Console.WriteLine("Flaco , pusiste: " + suma);
 */
 //EJERCIO 3 WHILE
 //El usuario ingresará una lista de nombre de persona, cuando 
@@ -138,20 +206,17 @@ Console.WriteLine("El total de datos ingresados fue:" + conteo);
 //------------------------------------------------------------
 /*
 Console.WriteLine("Ingresar nombres:");
-int conteo = 0;
+ string nombre = Console.ReadLine();
+double contador=0;
+while(nombre =="")
+{
+    contador = contador + 1;
+    Console.WriteLine("Ingresar nombres:");
+    nombre = Console.ReadLine();    
 
-while(true)
-{ 
-    string nombre = Console.ReadLine();
-    if(nombre =="")
-    {
-        break;
-    }
-    conteo++;
 }
-Console.WriteLine("La cantidad de nombres fueron:" + conteo);
+Console.WriteLine("La cantidad de nombres fueron:" + contador);
 */
-
 /*
 // EJERCICIO2 de WHILE @Siguiendo el ejercicio anterior, 
 //calcular el promedio de losvalores ingresados

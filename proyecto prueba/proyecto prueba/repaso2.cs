@@ -1,8 +1,42 @@
-﻿//Retomando el ejercicio 1 ; al finalizar la carga de productos, se ingresan las ventas
+﻿/* Retomando el ejercicio anterior, a continuación se colocan los nombres para
+// cada código de producto, (opcional si la carga se realiza del 1 al 10 sin pedir
+// el código o si se ingresa el código y luego la descripción del mismo) ; al finalizar
+// la carga de los 10 códigos indicar el nombre de los productos que tuvieron un total de
+// ventas menor a 10 unidades.
+int codigo = 1;
+double valorMaximo = 0;
+int codigoMaximo = 0;
+double valortotal;
+while (codigo != 0 && codigo <= 10)
+{
+    Console.WriteLine("Ingrese código del producto (1 al 10, 0 para finalizar):");
+    codigo = int.Parse(Console.ReadLine());
+    if (codigo != 0 && codigo <= 10)
+    {
+        Console.WriteLine("Ingrese nombre del producto:");
+        string? producto = Console.ReadLine();
+        Console.WriteLine("Ingrese precio:");
+        double precio = double.Parse(Console.ReadLine());
+        Console.WriteLine("Ingrese cantidad:");
+        double cantidad = double.Parse(Console.ReadLine());
+        Console.WriteLine("Ingrese ventas que tuvo:");
+        double ventas = double.Parse(Console.ReadLine());
+        valortotal = cantidad - ventas;
+        if (valortotal <= 0)
+        {
+            codigoMaximo = codigo;
+        }
+    }
+}
+Console.WriteLine("El producto cuyas cantidades restantes fueron menores o igual a 0 fueron el codigo: " + codigoMaximo);
+
+
+/*
+//Retomando el ejercicio 1 ; al finalizar la carga de productos, se ingresan las ventas
 //que hubo por cada código, puede haber más de 1 venta por cada articulo. El ingreso finaliza
 //al colocar un código en 0.  Informar al final los que tienen una cantidad (o sea la cantidad
 //inicial , restando las ventas que tuvo) menor o igual a 0
-int codigo = 1;
+int codigo=1;
 double valorMaximo = 0;
 int codigoMaximo = 0;
 double valortotal;
@@ -28,6 +62,7 @@ while (codigo != 0 && codigo <= 10)
     }
 }
 Console.WriteLine("El producto cuyas cantidades restantes fueron menores o igual a 0 fueron el codigo: "+codigoMaximo);
+*/
 /*
 //EJERCICIO
 //1 DE REPASO2
