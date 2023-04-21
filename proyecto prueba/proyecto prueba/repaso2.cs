@@ -95,3 +95,30 @@ while (codigo != 0 && codigo <= 10)
 }
 Console.WriteLine("El producto con mayor cantidad de unidades ("+valorMaximo+") es el de codigo: " + codigoMaximo);
 */
+//1- Se ingresa el código de producto (son 10 productos, codificados del 1 al 10),luego el
+//precio y la cantidad que del mismo.La carga finaliza cuando se ingresa un código = 0
+//; al terminar indicar el código de producto que mayor cantidad tiene.
+List<int> codig = new List<int>();
+List<string> nombres = new List<string>();
+int codigos = 1;
+while (codigos != 0 && codigos <= 10)
+{
+    Console.WriteLine("Ingrese código del producto (1 al 10, 0 para finalizar):");
+    codigos = int.Parse(Console.ReadLine());
+    codig.Add(codigos);
+    if (codigos != 0 && codigos <= 10)
+    {
+        Console.WriteLine("Ingrese nombre del producto:");
+        string? producto = Console.ReadLine();
+        Console.WriteLine("Ingrese precio:");
+        int precio = int.Parse(Console.ReadLine());
+        Console.WriteLine("Ingrese cantidad:");
+        int cantidad = int.Parse(Console.ReadLine());
+        nombres.Add(producto);
+        codig.Add(precio);
+        codig.Add(cantidad);   
+    }  
+}
+int valorMaximo = codig.Max();
+Console.WriteLine("El codigo del producto con mayor cantidad es: "+valorMaximo + nombres );
+
