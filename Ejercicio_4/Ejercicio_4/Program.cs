@@ -45,24 +45,18 @@ namespace Ejercicio_4
                             instrumento.Tocar();
                         }
             */
-            List<Producto> producto = new List<Producto>();
-            ProductoDigital productoDigital1 = new ProductoDigital();
-            productoDigital1.Nombre = "FIFA_23";
-            productoDigital1.Precio = 15000;
-            productoDigital1.Tamano = 100000;
-            producto.Add(new ProductoDigital ());
-
-            ProductoFisico productoFisico1 = new ProductoFisico();
-            productoFisico1.Nombre = "Play_4";
-            productoFisico1.Precio = 70000;
-            productoFisico1.Peso = 5;
-            producto.Add(new ProductoFisico());
-            foreach (Producto Producto in producto)
+            List<Producto> lista_producto = new List<Producto>();
+            ProductoDigital productoDigital1 = new ProductoDigital("FIFA_23",150000,10000);
+            ProductoFisico productoFisico1 = new ProductoFisico("Play_4",75000,5);
+            lista_producto.Add(productoDigital1);
+            list
+  
+            foreach (Producto productos in lista_producto)
             {
-                double preciofinalDigital = productoDigital1.CalcularTotal();
-                Console.WriteLine("El  producto " + productoDigital1.Nombre + " tiene un precio total de " + preciofinalDigital);
-                double preciofinalFisico= productoFisico1 .CalcularTotal();
-                Console.WriteLine("El  producto " + productoFisico1.Nombre + " tiene un precio total de " + preciofinalFisico);
+                Console.WriteLine($"El  nombre de este  producto es:{productos.Nombre}");
+                Console.WriteLine($"El  precio del producto es: {productos.Precio}");
+                Console.WriteLine($"El  impuesto del producto es: { productos.CalcularImpuesto()}");
+                Console.WriteLine($"El  precio final del producto es: {productos.CalcularTotal()}");
 
             }
         }
