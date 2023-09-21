@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\54349\\source\\repos\\SistemaEntidadFinanciera.sln\\Front\\Front.csproj": {}
+    "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\Ejercicio entregable - Entidad Financiera\\SistemaEntidadFinanciera.sln\\Front\\Front.csproj": {}
   },
   "projects": {
-    "C:\\Users\\54349\\source\\repos\\SistemaEntidadFinanciera.sln\\Back\\Back.csproj": {
+    "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\Ejercicio entregable - Entidad Financiera\\SistemaEntidadFinanciera.sln\\Back\\Back.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\54349\\source\\repos\\SistemaEntidadFinanciera.sln\\Back\\Back.csproj",
+        "projectUniqueName": "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\Ejercicio entregable - Entidad Financiera\\SistemaEntidadFinanciera.sln\\Back\\Back.csproj",
         "projectName": "Back",
-        "projectPath": "C:\\Users\\54349\\source\\repos\\SistemaEntidadFinanciera.sln\\Back\\Back.csproj",
+        "projectPath": "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\Ejercicio entregable - Entidad Financiera\\SistemaEntidadFinanciera.sln\\Back\\Back.csproj",
         "packagesPath": "C:\\Users\\54349\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\54349\\source\\repos\\SistemaEntidadFinanciera.sln\\Back\\obj\\",
+        "outputPath": "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\Ejercicio entregable - Entidad Financiera\\SistemaEntidadFinanciera.sln\\Back\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -79,14 +79,14 @@
         }
       }
     },
-    "C:\\Users\\54349\\source\\repos\\SistemaEntidadFinanciera.sln\\Front\\Front.csproj": {
+    "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\Ejercicio entregable - Entidad Financiera\\SistemaEntidadFinanciera.sln\\Front\\Front.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\54349\\source\\repos\\SistemaEntidadFinanciera.sln\\Front\\Front.csproj",
+        "projectUniqueName": "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\Ejercicio entregable - Entidad Financiera\\SistemaEntidadFinanciera.sln\\Front\\Front.csproj",
         "projectName": "Front",
-        "projectPath": "C:\\Users\\54349\\source\\repos\\SistemaEntidadFinanciera.sln\\Front\\Front.csproj",
+        "projectPath": "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\Ejercicio entregable - Entidad Financiera\\SistemaEntidadFinanciera.sln\\Front\\Front.csproj",
         "packagesPath": "C:\\Users\\54349\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\54349\\source\\repos\\SistemaEntidadFinanciera.sln\\Front\\obj\\",
+        "outputPath": "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\Ejercicio entregable - Entidad Financiera\\SistemaEntidadFinanciera.sln\\Front\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -107,8 +107,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\54349\\source\\repos\\SistemaEntidadFinanciera.sln\\Back\\Back.csproj": {
-                "projectPath": "C:\\Users\\54349\\source\\repos\\SistemaEntidadFinanciera.sln\\Back\\Back.csproj"
+              "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\Ejercicio entregable - Entidad Financiera\\SistemaEntidadFinanciera.sln\\Back\\Back.csproj": {
+                "projectPath": "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\Ejercicio entregable - Entidad Financiera\\SistemaEntidadFinanciera.sln\\Back\\Back.csproj"
               }
             }
           }
