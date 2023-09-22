@@ -85,6 +85,7 @@ namespace Back
         }
         public void GenerarResumenTarjeta(TarjetaCredito tarjeta)
         {
+           
             Console.WriteLine("Resumen de Tarjeta de Crédito");
             Console.WriteLine("Número de Tarjeta: " + tarjeta.NumeroTarjeta);
             Console.WriteLine("Saldo Disponible: " + tarjeta.SaldoDisponible);

@@ -11,6 +11,6 @@ namespace Back
         public int Id { get; set; }
         public int NumeroCuenta { get; set; }
         public double Saldo { get; set; }
-        public string Tipo { get; set; }
+        public string Tipo { get; set; }//corriento o ahorro
     }
 }
