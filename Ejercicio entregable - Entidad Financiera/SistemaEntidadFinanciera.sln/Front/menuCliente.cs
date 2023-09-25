@@ -1,12 +1,21 @@
-using Back;
+﻿using Back;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Front
 {
-    public partial class Form1 : Form
+    public partial class menuCliente : Form
     {
         Principal principal = new Principal();
         ApplicationDbContext context = new ApplicationDbContext();
-        public Form1()
+        public menuCliente()
         {
             InitializeComponent();
         }
@@ -27,15 +36,12 @@ namespace Front
             textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
-
-
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             listBox1.DisplayMember = "info_list_box";
             listBox1.DataSource = principal.DevolverListaClientes();
-
         }
     }
 }

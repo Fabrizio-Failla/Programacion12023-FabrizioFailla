@@ -114,7 +114,6 @@ C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Ejercicio entre
 C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Ejercicio entregable - Entidad Financiera\SistemaEntidadFinanciera.sln\Front\bin\Debug\net6.0-windows\Back.dll
 C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Ejercicio entregable - Entidad Financiera\SistemaEntidadFinanciera.sln\Front\bin\Debug\net6.0-windows\Back.pdb
 C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Ejercicio entregable - Entidad Financiera\SistemaEntidadFinanciera.sln\Front\obj\Debug\net6.0-windows\Front.csproj.AssemblyReference.cache
-C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Ejercicio entregable - Entidad Financiera\SistemaEntidadFinanciera.sln\Front\obj\Debug\net6.0-windows\Front.Form1.resources
 C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Ejercicio entregable - Entidad Financiera\SistemaEntidadFinanciera.sln\Front\obj\Debug\net6.0-windows\Front.csproj.GenerateResource.cache
 C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Ejercicio entregable - Entidad Financiera\SistemaEntidadFinanciera.sln\Front\obj\Debug\net6.0-windows\Front.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Ejercicio entregable - Entidad Financiera\SistemaEntidadFinanciera.sln\Front\obj\Debug\net6.0-windows\Front.AssemblyInfoInputs.cache
@@ -126,3 +125,6 @@ C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Ejercicio entre
 C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Ejercicio entregable - Entidad Financiera\SistemaEntidadFinanciera.sln\Front\obj\Debug\net6.0-windows\Front.pdb
 C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Ejercicio entregable - Entidad Financiera\SistemaEntidadFinanciera.sln\Front\obj\Debug\net6.0-windows\Front.genruntimeconfig.cache
 C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Ejercicio entregable - Entidad Financiera\SistemaEntidadFinanciera.sln\Front\obj\Debug\net6.0-windows\ref\Front.dll
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Ejercicio entregable - Entidad Financiera\SistemaEntidadFinanciera.sln\Front\obj\Debug\net6.0-windows\Front.menuCliente.resources
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Ejercicio entregable - Entidad Financiera\SistemaEntidadFinanciera.sln\Front\obj\Debug\net6.0-windows\Front.MenuPrincipal.resources
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Ejercicio entregable - Entidad Financiera\SistemaEntidadFinanciera.sln\Front\obj\Debug\net6.0-windows\Front.Catalogo.resources
