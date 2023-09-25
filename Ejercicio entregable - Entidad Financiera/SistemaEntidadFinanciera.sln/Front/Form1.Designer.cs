@@ -38,6 +38,7 @@
             textBox3 = new TextBox();
             button1 = new Button();
             listBox1 = new ListBox();
+            button2 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -124,11 +125,22 @@
             listBox1.Size = new Size(410, 214);
             listBox1.TabIndex = 10;
             // 
+            // button2
+            // 
+            button2.Location = new Point(382, 235);
+            button2.Name = "button2";
+            button2.Size = new Size(100, 28);
+            button2.TabIndex = 11;
+            button2.Text = "Mostrar clientes";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(667, 291);
+            Controls.Add(button2);
             Controls.Add(listBox1);
             Controls.Add(button1);
             Controls.Add(textBox3);
@@ -157,5 +169,6 @@
         private TextBox textBox3;
         private Button button1;
         private ListBox listBox1;
+        private Button button2;
     }
 }
