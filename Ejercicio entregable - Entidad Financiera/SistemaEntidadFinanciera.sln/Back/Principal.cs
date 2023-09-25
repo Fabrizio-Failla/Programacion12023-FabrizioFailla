@@ -26,22 +26,31 @@ namespace Back
             context.TarjetaCreditos.Add(tarjeta);
             context.SaveChanges();
         }
-        public void PausarTarjetaCredito(TarjetaCredito tarjeta)
+        public void PausarTarjetaCredito(int tarjetaId)
         {
-
-            tarjeta.Estado = "Pausada";
-            context.SaveChanges();
-            Console.WriteLine("Tarjeta de crédito pausada correctamente.");
+            var tarjeta = context.TarjetaCreditos.Find(tarjetaId);
+            if (tarjeta != null)
+            {
+                tarjeta.Estado = "Pausada";
+                context.SaveChanges();
+            }
         }
-        public void RealizarDeposito(CuentaBancaria cuenta, double monto)
+        public void RealizarDeposito(int cuentaID, double monto)
         {
-            cuenta.Saldo += monto;
-            context.SaveChanges();
-            Console.WriteLine("Depósito realizado correctamente.");
-        }
-        public void RealizarExtraccion(CuentaBancaria cuenta, double monto)
-        {
+            var cuenta = context.CuentaBancarias.Find(cuentaID);
+            if (cuenta != null)
+            {
+                cuenta.Saldo += monto;
+                context.SaveChanges();
+                Console.WriteLine("Deposito realizada]o correctamente.");
 
+            }
+            else { Console.WriteLine("Su cuenta no se encontro."); }
+        }
+
+        public void RealizarExtraccion(CuentaBancaria cuentaID, double monto)
+        {
+            var cuenta = context.CuentaBancarias.Find(cuentaID);
             if (cuenta.Saldo >= monto)
             {
                 cuenta.Saldo -= monto;
@@ -53,24 +62,23 @@ namespace Back
                 Console.WriteLine("Saldo insuficiente para realizar la extracción.");
             }
         }
-        public void RealizarTransferencia(CuentaBancaria origen, CuentaBancaria destino, double monto)
+        public void RealizarTransferencia(int cuentaOrigenId, int cuentaDestinoId, double monto)
         {
+            var cuentaOrigen = context.CuentaBancarias.Find(cuentaOrigenId);
+            var cuentaDestino = context.CuentaBancarias.Find(cuentaDestinoId);
 
-            if (origen.Saldo >= monto)
+            if (cuentaOrigen != null && cuentaDestino != null && (cuentaOrigen.Saldo >= monto))
             {
-                origen.Saldo -= monto;
-                destino.Saldo += monto;
+                cuentaOrigen.Saldo -= monto;
+                cuentaDestino.Saldo += monto;
                 context.SaveChanges();
                 Console.WriteLine("Transferencia realizada correctamente.");
             }
-            else
-            {
-                Console.WriteLine("Saldo insuficiente para realizar la transferencia.");
-            }
+            else { Console.WriteLine("Saldo insuficiente para realizar la transferencia."); }
         }
-        public void PagarTarjetaCredito(CuentaBancaria cuenta, TarjetaCredito tarjeta, double monto)
+        public void PagarTarjetaCredito(CuentaBancaria cuenta, TarjetaCredito tarjetaID, double monto)
         {
-
+            var tarjeta = context.TarjetaCreditos.Find(tarjetaID);
             if (cuenta.Saldo >= monto)
             {
                 cuenta.Saldo -= monto;

@@ -13,5 +13,7 @@ namespace Back
         public double LimiteCredito { get; set; }
         public double SaldoDisponible { get; set; }
         public string Estado { get; set; }
+        /*public enum EstadoCuenta{Activa,Pausada,Bloqueada}*/
+        
     }
 }
