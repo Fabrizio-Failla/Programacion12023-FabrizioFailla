@@ -9,6 +9,10 @@ namespace Back
     public class Principal
     {
         ApplicationDbContext context = new ApplicationDbContext();
+        public List<Cliente> DevolverListaClientes()
+        {
+            return context.Clientes.ToList();
+        }
 
         public void AgregarCliente(Cliente cliente)
         {
