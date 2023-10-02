@@ -57,7 +57,6 @@ namespace Front
             else
             {
                 int cuentaId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Id"].Value);
-
                 principal.RealizarDeposito(cuentaId, double.Parse(textBox1.Text));
                 ActualizarGridVie();
             }
@@ -106,6 +105,13 @@ namespace Front
                 principal.RealizarTransferencia(cuentaOrigenId, cuentaDestinoId, monto);
                 ActualizarGridVie();
             }
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            MenuPrincial crear = new MenuPrincial();
+            crear.Show();
+            this.Hide();
         }
     }
 }

@@ -35,6 +35,7 @@
             label2 = new Label();
             label1 = new Label();
             label3 = new Label();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -44,7 +45,7 @@
             dataGridView1.Location = new Point(19, 29);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(573, 194);
+            dataGridView1.Size = new Size(596, 194);
             dataGridView1.TabIndex = 23;
             // 
             // button2
@@ -102,11 +103,22 @@
             label3.TabIndex = 24;
             label3.Text = "Seleccionar Tarjeta que \r\nquieras ver su resumen";
             // 
+            // button3
+            // 
+            button3.Location = new Point(707, 246);
+            button3.Name = "button3";
+            button3.Size = new Size(73, 31);
+            button3.TabIndex = 25;
+            button3.Text = "Volver";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // MenuTarjetaCredito
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(792, 289);
+            Controls.Add(button3);
             Controls.Add(label3);
             Controls.Add(dataGridView1);
             Controls.Add(button2);
@@ -131,5 +143,6 @@
         private Label label2;
         private Label label1;
         private Label label3;
+        private Button button3;
     }
 }

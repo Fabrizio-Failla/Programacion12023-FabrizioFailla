@@ -55,7 +55,7 @@ namespace Front
             textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
-       
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -76,6 +76,11 @@ namespace Front
         }
 
         private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CrearTarjetaCredito_Load(object sender, EventArgs e)
         {
 
         }

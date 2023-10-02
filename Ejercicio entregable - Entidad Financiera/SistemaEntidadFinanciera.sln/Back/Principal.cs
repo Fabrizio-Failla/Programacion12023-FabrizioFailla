@@ -45,7 +45,7 @@ namespace Back
                 context.SaveChanges();
             }
         }
-       
+
         public void EliminarCuentaBancaria(CuentaBancaria cuentaBancaria)
         {
             var cuentaEncontrada = context.CuentaBancarias.Find(cuentaBancaria.Id);
@@ -61,7 +61,7 @@ namespace Back
             context.SaveChanges();
         }
 
-        public bool  ObtenerClientePorDNI(int DNI)
+        public bool ObtenerClientePorDNI(int DNI)
         {
             var clienteEncontrado = context.Clientes.Find(DNI);
             return clienteEncontrado != null;
@@ -105,8 +105,8 @@ namespace Back
             {
                 return "No se a encontrado la cuenta";
             }
-           
-           
+
+
         }
         public void RealizarTransferencia(int cuentaOrigenId, int cuentaDestinoId, double monto)
         {
@@ -117,7 +117,7 @@ namespace Back
             {
                 cuentaOrigen.Saldo -= monto;
                 cuentaDestino.Saldo += monto;
-                context.SaveChanges();  
+                context.SaveChanges();
             }
         }
         /*public void PagarTarjetaCredito(int tarjetaId, double monto)
@@ -133,9 +133,16 @@ namespace Back
             }
         }
         */
-        public string GenerarResumenTarjeta(TarjetaCredito tarjetaCredito)
-        {return $"Resumen de Tarjeta de Crédito.Número de Tarjeta:{tarjetaCredito.NumeroTarjeta}, Saldo Disponible:{tarjetaCredito.SaldoDisponible}. Limite de Crédito:{tarjetaCredito.LimiteCredito}.";}
-        
-    }
+        public string GenerarResumenTarjeta(int tarjetaID)
+        {
+            var resumen = context.TarjetaCreditos.Find(tarjetaID);
+            if (resumen != null)
+            {
+                return $"Resumen de Tarjeta de Crédito.Número de Tarjeta:{resumen.NumeroTarjeta}, Saldo Disponible:{resumen.SaldoDisponible}. Limite de Crédito:{resumen.LimiteCredito}.Estado {resumen.Estado}.";
+            }
+            else { return "selecciona algo"; }
 
+        }
+
+    }
 }

@@ -28,70 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
+            button3 = new Button();
             button2 = new Button();
             button1 = new Button();
-            label1 = new Label();
-            button3 = new Button();
             SuspendLayout();
-            // 
-            // button2
-            // 
-            button2.Location = new Point(166, 92);
-            button2.Name = "button2";
-            button2.Size = new Size(139, 40);
-            button2.TabIndex = 38;
-            button2.Text = "Crear Cuentas ";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(12, 92);
-            button1.Name = "button1";
-            button1.Size = new Size(126, 40);
-            button1.TabIndex = 37;
-            button1.Text = "Administrar Cuenta Corrientes";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(139, 42);
-            label1.Name = "label1";
-            label1.Size = new Size(0, 15);
-            label1.TabIndex = 39;
             // 
             // button3
             // 
-            button3.Location = new Point(331, 92);
+            button3.Location = new Point(132, 192);
             button3.Name = "button3";
-            button3.Size = new Size(126, 40);
-            button3.TabIndex = 40;
-            button3.Text = "Administrar Tarjetas de Credito";
+            button3.Size = new Size(224, 41);
+            button3.TabIndex = 5;
+            button3.Text = "Menu Tarjetas de Credito";
             button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            button3.Click += button3_Click_1;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(132, 97);
+            button2.Name = "button2";
+            button2.Size = new Size(224, 73);
+            button2.TabIndex = 4;
+            button2.Text = "Administrar Cuentas \r\nClientes\r\nCuentas bancarias\r\ntarjetas de credito";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click_1;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(132, 33);
+            button1.Name = "button1";
+            button1.Size = new Size(224, 41);
+            button1.TabIndex = 3;
+            button1.Text = "Menu Cuenta Corriente";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // MenuPrincial
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(469, 219);
+            ClientSize = new Size(469, 245);
             Controls.Add(button3);
-            Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(button1);
             Name = "MenuPrincial";
             Text = "MenuPrincial";
+            Load += MenuPrincial_Load;
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
+        private Button button3;
         private Button button2;
         private Button button1;
-        private Label label1;
-        private Button button3;
     }
 }

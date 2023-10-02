@@ -229,6 +229,7 @@
             Controls.Add(button5);
             Name = "CrearTarjetaCredito";
             Text = "CrearTarjetaCredito";
+            Load += CrearTarjetaCredito_Load;
             ResumeLayout(false);
             PerformLayout();
         }

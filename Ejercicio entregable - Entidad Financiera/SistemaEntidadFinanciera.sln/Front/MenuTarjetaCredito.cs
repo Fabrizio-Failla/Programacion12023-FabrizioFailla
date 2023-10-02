@@ -1,4 +1,5 @@
 ﻿using Back;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,19 +29,25 @@ namespace Front
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if (dataGridView1.CurrentCell != null)
+            {
+                int seleccion = dataGridView1.CurrentCellAddress.Y;
+                MessageBox.Show(principal.GenerarResumenTarjeta((int)dataGridView1[0, seleccion].Value));
+                ActualizarGridVie();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (dataGridView1.CurrentCell != null)
             {
-                int cuentaId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Id"].Value);
-                principal.PausarTarjetaCredito(cuentaId);
+                int seleccion = dataGridView1.CurrentCellAddress.Y;
+                principal.PausarTarjetaCredito((int)dataGridView1[0, seleccion].Value);
                 ActualizarGridVie();
             }
             else
-            { MessageBox.Show("Seleccione una cuenta."); }
+            { MessageBox.Show("seleccionar una casilla"); }
+
 
 
         }
@@ -48,6 +55,13 @@ namespace Front
         private void MenuTarjetaCredito_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = principal.DevolverListaTarjetaCredito();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MenuPrincial crear = new MenuPrincial();
+            crear.Show();
+            this.Hide();
         }
     }
 }
