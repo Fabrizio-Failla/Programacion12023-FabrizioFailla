@@ -13,16 +13,56 @@ namespace Back
         {
             return context.Clientes.ToList();
         }
+        public List<CuentaBancaria> DevolverListaCuentaBancaria()
+        {
+            return context.CuentaBancarias.ToList();
+        }
 
         public void AgregarCliente(Cliente cliente)
         {
             context.Clientes.Add(cliente);
             context.SaveChanges();
         }
+        public void EliminarCLiente(Cliente cliente)
+        {
+            var clienteEncontrado = context.Clientes.Find(cliente.Id);
+            if (clienteEncontrado != null)
+            {
+                context.Clientes.Remove(clienteEncontrado);
+                context.SaveChanges();
+            }
+        }
+        public void ModificarCliente(Cliente clienteModificado)
+        {
+            var clienteEncontrado = context.Clientes.Find(clienteModificado.Id);
+            if (clienteEncontrado != null)
+            {
+                clienteEncontrado.Nombre = clienteModificado.Nombre;
+                clienteEncontrado.Apellido = clienteModificado.Apellido;
+                clienteEncontrado.Dni = clienteModificado.Dni;
+                context.SaveChanges();
+            }
+        }
+        public void EliminarCuentaBancaria(CuentaBancaria cuentaBancaria)
+        {
+            var cuentaEncontrada = context.CuentaBancarias.Find(cuentaBancaria.Id);
+            if (cuentaEncontrada != null)
+            {
+                context.CuentaBancarias.Remove(cuentaEncontrada);
+                context.SaveChanges();
+            }
+        }
         public void CrearCuentaBancaria(CuentaBancaria cuenta)
         {
             context.CuentaBancarias.Add(cuenta);
             context.SaveChanges();
+        }
+
+        public bool  ObtenerClientePorDNI(int DNI)
+        {
+            var clienteEncontrado = context.Clientes.Find(DNI);
+            return clienteEncontrado != null;
+
         }
 
         public void EmitirTarjetaCredito(TarjetaCredito tarjeta)
@@ -46,10 +86,7 @@ namespace Back
             {
                 cuenta.Saldo += monto;
                 context.SaveChanges();
-                Console.WriteLine("Deposito realizada]o correctamente.");
-
             }
-            else { Console.WriteLine("Su cuenta no se encontro."); }
         }
 
         public void RealizarExtraccion(CuentaBancaria cuentaID, double monto)
@@ -59,12 +96,8 @@ namespace Back
             {
                 cuenta.Saldo -= monto;
                 context.SaveChanges();
-                Console.WriteLine("Extracción realizada correctamente.");
             }
-            else
-            {
-                Console.WriteLine("Saldo insuficiente para realizar la extracción.");
-            }
+           
         }
         public void RealizarTransferencia(int cuentaOrigenId, int cuentaDestinoId, double monto)
         {
@@ -75,10 +108,8 @@ namespace Back
             {
                 cuentaOrigen.Saldo -= monto;
                 cuentaDestino.Saldo += monto;
-                context.SaveChanges();
-                Console.WriteLine("Transferencia realizada correctamente.");
+                context.SaveChanges();  
             }
-            else { Console.WriteLine("Saldo insuficiente para realizar la transferencia."); }
         }
         public void PagarTarjetaCredito(CuentaBancaria cuenta, TarjetaCredito tarjetaID, double monto)
         {
@@ -88,21 +119,10 @@ namespace Back
                 cuenta.Saldo -= monto;
                 tarjeta.SaldoDisponible += monto;
                 context.SaveChanges();
-                Console.WriteLine("Pago de tarjeta de crédito realizado correctamente.");
-            }
-            else
-            {
-                Console.WriteLine("Saldo insuficiente para realizar el pago.");
             }
         }
-        public void GenerarResumenTarjeta(TarjetaCredito tarjeta)
-        {
-           
-            Console.WriteLine("Resumen de Tarjeta de Crédito");
-            Console.WriteLine("Número de Tarjeta: " + tarjeta.NumeroTarjeta);
-            Console.WriteLine("Saldo Disponible: " + tarjeta.SaldoDisponible);
-            Console.WriteLine("Limite de Crédito: " + tarjeta.LimiteCredito);
-        }
+        public string GenerarResumenTarjeta(TarjetaCredito tarjeta)
+        {return $"Resumen de Tarjeta de Crédito.Número de Tarjeta:{tarjeta.NumeroTarjeta}, Saldo Disponible:{tarjeta.SaldoDisponible}. Limite de Crédito:{tarjeta.LimiteCredito}.";}
 
     }
 

@@ -43,5 +43,37 @@ namespace Front
             listBox1.DisplayMember = "info_list_box";
             listBox1.DataSource = principal.DevolverListaClientes();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Cliente itemSeleccionado = (Cliente)listBox1.SelectedItem;
+            listBox1.DataSource = null;
+            principal.EliminarCLiente(itemSeleccionado);
+            listBox1.DisplayMember = "info_list_box";
+            listBox1.DataSource = principal.DevolverListaClientes();
+            _ = MessageBox.Show("El cliente se a eliminado con éxito");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MenuPrincipalDeAdm menuPrincipal = new MenuPrincipalDeAdm();
+            menuPrincipal.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Cliente itemSeleccionado = (Cliente)listBox1.SelectedItem;
+            Cliente nuevoCliente=new Cliente();
+            nuevoCliente.Nombre=textBox1.Text;
+            nuevoCliente.Apellido=textBox2.Text;
+            nuevoCliente.Dni=int.Parse(textBox3.Text);
+            principal.ModificarCliente(nuevoCliente);
+            listBox1.DisplayMember = "info_list_box";
+            listBox1.DataSource = principal.DevolverListaClientes();
+            _ = MessageBox.Show("El cliente se a modificado con éxito");
+
+        }
     }
+
 }
