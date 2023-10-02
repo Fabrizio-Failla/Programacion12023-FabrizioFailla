@@ -89,14 +89,20 @@ namespace Back
             }
         }
 
-        public void RealizarExtraccion(CuentaBancaria cuentaID, double monto)
+        public string RealizarExtraccion(int cuentaID, double monto)
         {
             var cuenta = context.CuentaBancarias.Find(cuentaID);
             if (cuenta.Saldo >= monto)
             {
                 cuenta.Saldo -= monto;
                 context.SaveChanges();
+                return "Se a retirado el dinero con exito";
             }
+            else
+            {
+                return "No se a encontrado la cuenta";
+            }
+           
            
         }
         public void RealizarTransferencia(int cuentaOrigenId, int cuentaDestinoId, double monto)

@@ -62,5 +62,26 @@ namespace Front
 
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int cuentaID = int.Parse(textBox4.Text);
+            double monto = double.Parse(textBox2.Text);
+            CuentaBancaria cuenta = context.CuentaBancarias.Find(cuentaID);
+            if (cuenta != null)
+            {
+                string mensaje = principal.RealizarExtraccion(cuentaID, monto);
+                MessageBox.Show(mensaje);
+                textBox1.Clear();
+                textBox4.Clear();
+            }
+            else
+            {
+                MessageBox.Show("El monto a retirar es superir al saldo");
+                textBox1.Clear();
+                textBox4.Clear();
+            }
+
+        }
     }
 }

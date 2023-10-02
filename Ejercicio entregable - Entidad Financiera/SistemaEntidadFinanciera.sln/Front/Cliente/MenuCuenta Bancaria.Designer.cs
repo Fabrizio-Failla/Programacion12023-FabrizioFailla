@@ -42,7 +42,6 @@
             textBox3 = new TextBox();
             label7 = new Label();
             textBox4 = new TextBox();
-            listBox1 = new ListBox();
             SuspendLayout();
             // 
             // textBox1
@@ -113,6 +112,7 @@
             button2.TabIndex = 7;
             button2.Text = "Retirar";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -151,7 +151,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(0, 46);
+            label7.Location = new Point(241, 47);
             label7.Name = "label7";
             label7.Size = new Size(108, 15);
             label7.TabIndex = 13;
@@ -160,27 +160,17 @@
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(114, 43);
+            textBox4.Location = new Point(355, 44);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(102, 23);
             textBox4.TabIndex = 12;
             textBox4.TextChanged += textBox4_TextChanged;
-            // 
-            // listBox1
-            // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(312, 12);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(372, 64);
-            listBox1.TabIndex = 33;
             // 
             // MenuCuenta_Bancaria
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(830, 253);
-            Controls.Add(listBox1);
             Controls.Add(label7);
             Controls.Add(textBox4);
             Controls.Add(button3);
@@ -218,6 +208,5 @@
         private TextBox textBox3;
         private Label label7;
         private TextBox textBox4;
-        private ListBox listBox1;
     }
 }
