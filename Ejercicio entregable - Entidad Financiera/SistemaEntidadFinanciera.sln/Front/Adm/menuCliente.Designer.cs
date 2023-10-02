@@ -40,13 +40,12 @@
             label2 = new Label();
             label1 = new Label();
             button3 = new Button();
-            button4 = new Button();
             button5 = new Button();
             SuspendLayout();
             // 
             // button2
             // 
-            button2.Location = new Point(330, 217);
+            button2.Location = new Point(340, 217);
             button2.Name = "button2";
             button2.Size = new Size(106, 42);
             button2.TabIndex = 22;
@@ -140,7 +139,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(211, 217);
+            button3.Location = new Point(489, 217);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 24;
@@ -148,19 +147,9 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
-            // button4
-            // 
-            button4.Location = new Point(473, 217);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 26;
-            button4.Text = "Modificar";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
-            // 
             // button5
             // 
-            button5.Location = new Point(4, 262);
+            button5.Location = new Point(4, 251);
             button5.Name = "button5";
             button5.Size = new Size(75, 23);
             button5.TabIndex = 27;
@@ -174,7 +163,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(578, 286);
             Controls.Add(button5);
-            Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(listBox1);
@@ -207,7 +195,6 @@
         private Label label2;
         private Label label1;
         private Button button3;
-        private Button button4;
         private Button button5;
     }
 }

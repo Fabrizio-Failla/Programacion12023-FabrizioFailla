@@ -30,5 +30,19 @@ namespace Front
             crear.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            CrearTarjetaCredito crear = new CrearTarjetaCredito();
+            crear.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MenuPrincial crear = new MenuPrincial();
+            crear.Show();
+            this.Hide();
+        }
     }
 }

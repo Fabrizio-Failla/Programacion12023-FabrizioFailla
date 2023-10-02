@@ -17,6 +17,10 @@ namespace Back
         {
             return context.CuentaBancarias.ToList();
         }
+        public List<TarjetaCredito> DevolverListaTarjetaCredito()
+        {
+            return context.TarjetaCreditos.ToList();
+        }
 
         public void AgregarCliente(Cliente cliente)
         {
@@ -32,17 +36,16 @@ namespace Back
                 context.SaveChanges();
             }
         }
-        public void ModificarCliente(Cliente clienteModificado)
+        public void Eliminartarjetas(TarjetaCredito tarjetaCredito)
         {
-            var clienteEncontrado = context.Clientes.Find(clienteModificado.Id);
-            if (clienteEncontrado != null)
+            var tarjetaEncontrada = context.TarjetaCreditos.Find(tarjetaCredito.Id);
+            if (tarjetaEncontrada != null)
             {
-                clienteEncontrado.Nombre = clienteModificado.Nombre;
-                clienteEncontrado.Apellido = clienteModificado.Apellido;
-                clienteEncontrado.Dni = clienteModificado.Dni;
+                context.TarjetaCreditos.Remove(tarjetaEncontrada);
                 context.SaveChanges();
             }
         }
+       
         public void EliminarCuentaBancaria(CuentaBancaria cuentaBancaria)
         {
             var cuentaEncontrada = context.CuentaBancarias.Find(cuentaBancaria.Id);
@@ -117,19 +120,22 @@ namespace Back
                 context.SaveChanges();  
             }
         }
-        public void PagarTarjetaCredito(CuentaBancaria cuenta, TarjetaCredito tarjetaID, double monto)
+        /*public void PagarTarjetaCredito(int tarjetaId, double monto)
         {
-            var tarjeta = context.TarjetaCreditos.Find(tarjetaID);
-            if (cuenta.Saldo >= monto)
+            var tarjeta = context.TarjetaCreditos.Find(tarjetaId);
+            if (tarjeta != null && tarjeta.Estado == "Activa")
             {
-                cuenta.Saldo -= monto;
-                tarjeta.SaldoDisponible += monto;
-                context.SaveChanges();
+                if (monto <= tarjeta.MontoDeuda)
+                {
+                    tarjeta.MontoDeuda -= monto;
+                    context.SaveChanges();
+                }
             }
         }
-        public string GenerarResumenTarjeta(TarjetaCredito tarjeta)
-        {return $"Resumen de Tarjeta de Crédito.Número de Tarjeta:{tarjeta.NumeroTarjeta}, Saldo Disponible:{tarjeta.SaldoDisponible}. Limite de Crédito:{tarjeta.LimiteCredito}.";}
-
+        */
+        public string GenerarResumenTarjeta(TarjetaCredito tarjetaCredito)
+        {return $"Resumen de Tarjeta de Crédito.Número de Tarjeta:{tarjetaCredito.NumeroTarjeta}, Saldo Disponible:{tarjetaCredito.SaldoDisponible}. Limite de Crédito:{tarjetaCredito.LimiteCredito}.";}
+        
     }
 
 }

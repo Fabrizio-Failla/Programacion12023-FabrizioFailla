@@ -7,6 +7,7 @@ using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,6 +17,11 @@ namespace Front
     {
         Principal principal = new Principal();
         ApplicationDbContext context = new ApplicationDbContext();
+        private void ActualizarGridVie()
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = principal.DevolverListaCuentaBancaria();
+        }
         public MenuCuenta_Bancaria()
         {
             InitializeComponent();
@@ -23,7 +29,7 @@ namespace Front
 
         private void MenuCuenta_Bancaria_Load(object sender, EventArgs e)
         {
-
+            dataGridView1.DataSource = principal.DevolverListaCuentaBancaria();
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -44,44 +50,62 @@ namespace Front
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int cuentaID = int.Parse(textBox4.Text);
-            double monto = double.Parse(textBox1.Text);
-            CuentaBancaria cuenta = context.CuentaBancarias.Find(cuentaID);
-            if (cuenta != null)
+            if (textBox1.Text == "")
             {
-                principal.RealizarDeposito(cuentaID, monto);
-                textBox1.Clear();
-                textBox4.Clear();
+                MessageBox.Show("Complete el campo monto nuevamente.");
             }
             else
             {
-                MessageBox.Show("No se encontró la cuenta");
-                textBox1.Clear();
-                textBox4.Clear();
-            }
+                int cuentaId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Id"].Value);
 
+                principal.RealizarDeposito(cuentaId, double.Parse(textBox1.Text));
+                ActualizarGridVie();
+            }
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int cuentaID = int.Parse(textBox4.Text);
-            double monto = double.Parse(textBox2.Text);
-            CuentaBancaria cuenta = context.CuentaBancarias.Find(cuentaID);
-            if (cuenta != null)
+            if (textBox2.Text == "")
             {
-                string mensaje = principal.RealizarExtraccion(cuentaID, monto);
-                MessageBox.Show(mensaje);
-                textBox1.Clear();
-                textBox4.Clear();
+                MessageBox.Show("Complete el campo monto nuevamente.");
             }
             else
             {
-                MessageBox.Show("El monto a retirar es superir al saldo");
-                textBox1.Clear();
-                textBox4.Clear();
+                int cuentaId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Id"].Value);
+
+                principal.RealizarExtraccion(cuentaId, double.Parse(textBox2.Text));
+                ActualizarGridVie();
             }
 
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "")
+            {
+                MessageBox.Show("Complete el campo monto nuevamente.");
+            }
+            else
+            {
+                int cuentaOrigenId = Convert.ToInt32(textBox3.Text);
+                int cuentaDestinoId = Convert.ToInt32(textBox4.Text);
+                double monto = double.Parse(textBox5.Text);
+
+                principal.RealizarTransferencia(cuentaOrigenId, cuentaDestinoId, monto);
+                ActualizarGridVie();
+            }
         }
     }
 }

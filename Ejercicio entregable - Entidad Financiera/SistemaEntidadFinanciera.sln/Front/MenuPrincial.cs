@@ -22,30 +22,23 @@ namespace Front
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string nombreIngresado = textBox1.Text;
-            string apellidoIngresado = textBox2.Text;
-            int DniIngresado = int.Parse(textBox3.Text);
 
-            Cliente clienteEncontrado = context.Clientes.FirstOrDefault(c =>
-                c.Nombre == nombreIngresado &&
-                c.Apellido == apellidoIngresado &&
-                c.Dni == DniIngresado);
+            MenuCuenta_Bancaria cuentaBancaria = new MenuCuenta_Bancaria();
+            cuentaBancaria.Show();
+            this.Hide();
 
-            if (clienteEncontrado != null)
-            {
-                MenuCuenta_Bancaria cuentaBancaria = new MenuCuenta_Bancaria();
-                cuentaBancaria.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Datos incorrectos, intente nuevamente");
-            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             MenuPrincipalDeAdm crear = new MenuPrincipalDeAdm();
+            crear.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MenuTarjetaCredito crear = new MenuTarjetaCredito();
             crear.Show();
             this.Hide();
         }

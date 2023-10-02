@@ -10,10 +10,16 @@
     <Compile Update="Cliente\MenuCuenta Bancaria.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="CrearTarjetaCredito.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="MenuPrincial.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="MenuPrincipalDeAdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MenuTarjetaCredito.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

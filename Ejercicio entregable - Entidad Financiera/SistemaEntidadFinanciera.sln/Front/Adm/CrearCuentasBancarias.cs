@@ -68,5 +68,12 @@ namespace Front
             listBox1.DisplayMember = "info_list_box";
             listBox1.DataSource = principal.DevolverListaCuentaBancaria();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MenuPrincipalDeAdm crear = new MenuPrincipalDeAdm();
+            crear.Show();
+            this.Hide();
+        }
     }
 }

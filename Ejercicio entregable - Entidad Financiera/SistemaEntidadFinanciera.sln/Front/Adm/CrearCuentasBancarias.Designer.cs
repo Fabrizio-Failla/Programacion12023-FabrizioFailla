@@ -42,6 +42,7 @@
             label8 = new Label();
             comboBox1 = new ComboBox();
             button3 = new Button();
+            button5 = new Button();
             SuspendLayout();
             // 
             // button2
@@ -166,11 +167,22 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // button5
+            // 
+            button5.Location = new Point(12, 271);
+            button5.Name = "button5";
+            button5.Size = new Size(75, 23);
+            button5.TabIndex = 40;
+            button5.Text = "Volver";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
             // CrearCuentasBancarias
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(729, 297);
+            ClientSize = new Size(679, 297);
+            Controls.Add(button5);
             Controls.Add(button3);
             Controls.Add(comboBox1);
             Controls.Add(label8);
@@ -207,5 +219,6 @@
         private Label label8;
         private ComboBox comboBox1;
         private Button button3;
+        private Button button5;
     }
 }
