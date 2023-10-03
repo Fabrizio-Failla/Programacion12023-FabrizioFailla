@@ -82,6 +82,24 @@ namespace Back
                 context.SaveChanges();
             }
         }
+        public void ActivarTarjetaCredito(int tarjetaId)
+        {
+            var tarjeta = context.TarjetaCreditos.Find(tarjetaId);
+            if (tarjeta != null)
+            {
+                tarjeta.Estado = "Activa";
+                context.SaveChanges();
+            }
+        }
+        public void BloquearTarjetaCredito(int tarjetaId)
+        {
+            var tarjeta = context.TarjetaCreditos.Find(tarjetaId);
+            if (tarjeta != null)
+            {
+                tarjeta.Estado = "Bloqueado";
+                context.SaveChanges();
+            }
+        }
         public void RealizarDeposito(int cuentaID, double monto)
         {
             var cuenta = context.CuentaBancarias.Find(cuentaID);

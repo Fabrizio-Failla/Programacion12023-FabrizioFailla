@@ -63,5 +63,29 @@ namespace Front
             crear.Show();
             this.Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentCell != null)
+            {
+                int seleccion = dataGridView1.CurrentCellAddress.Y;
+                principal.ActivarTarjetaCredito((int)dataGridView1[0, seleccion].Value);
+                ActualizarGridVie();
+            }
+            else
+            { MessageBox.Show("seleccionar una casilla"); }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentCell != null)
+            {
+                int seleccion = dataGridView1.CurrentCellAddress.Y;
+                principal.BloquearTarjetaCredito((int)dataGridView1[0, seleccion].Value);
+                ActualizarGridVie();
+            }
+            else
+            { MessageBox.Show("seleccionar una casilla"); }
+        }
     }
 }
