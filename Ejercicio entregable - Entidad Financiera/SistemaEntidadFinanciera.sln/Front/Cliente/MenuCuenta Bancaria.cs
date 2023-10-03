@@ -50,33 +50,48 @@ namespace Front
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "")
+            if (dataGridView1.CurrentCell != null)
             {
-                MessageBox.Show("Complete el campo monto nuevamente.");
+                if (textBox1.Text == "")
+                {
+                    MessageBox.Show("Complete el campo monto nuevamente.");
+                }
+                else
+                {
+                    int seleccion = dataGridView1.CurrentCellAddress.Y;
+                    //int cuentaId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Id"].Value);
+                    principal.RealizarDeposito((int)dataGridView1[0, seleccion].Value, double.Parse(textBox1.Text));
+                    ActualizarGridVie();
+                }
             }
-            else
+            else 
             {
-                int cuentaId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Id"].Value);
-                principal.RealizarDeposito(cuentaId, double.Parse(textBox1.Text));
-                ActualizarGridVie();
+                MessageBox.Show("seleccionar una casilla"); 
             }
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text == "")
+            if (dataGridView1.CurrentCell != null)
             {
-                MessageBox.Show("Complete el campo monto nuevamente.");
+                if (textBox2.Text == "")
+                {
+                    MessageBox.Show("Complete el campo monto nuevamente.");
+                }
+                else
+                {
+                    int seleccion = dataGridView1.CurrentCellAddress.Y;
+                    //int cuentaId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Id"].Value);
+                    principal.RealizarExtraccion((int)dataGridView1[0,seleccion].Value, double.Parse(textBox2.Text));
+                    ActualizarGridVie();
+                }
             }
-            else
+            else 
             {
-                int cuentaId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Id"].Value);
-
-                principal.RealizarExtraccion(cuentaId, double.Parse(textBox2.Text));
-                ActualizarGridVie();
+                MessageBox.Show("seleccionar una casilla"); 
             }
-
+               
 
         }
 
@@ -101,10 +116,10 @@ namespace Front
                 int cuentaOrigenId = Convert.ToInt32(textBox3.Text);
                 int cuentaDestinoId = Convert.ToInt32(textBox4.Text);
                 double monto = double.Parse(textBox5.Text);
-
                 principal.RealizarTransferencia(cuentaOrigenId, cuentaDestinoId, monto);
-                ActualizarGridVie();
+                ActualizarGridVie();              
             }
+          
         }
 
         private void button4_Click_1(object sender, EventArgs e)
