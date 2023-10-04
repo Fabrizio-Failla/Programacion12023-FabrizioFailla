@@ -40,23 +40,27 @@
             label5 = new Label();
             button5 = new Button();
             label6 = new Label();
+            button6 = new Button();
+            textBox1 = new TextBox();
+            label7 = new Label();
+            label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(19, 29);
+            dataGridView1.Location = new Point(3, 23);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(596, 194);
+            dataGridView1.Size = new Size(596, 235);
             dataGridView1.TabIndex = 23;
             // 
             // button2
             // 
-            button2.Location = new Point(658, 50);
+            button2.Location = new Point(716, 7);
             button2.Name = "button2";
-            button2.Size = new Size(94, 39);
+            button2.Size = new Size(72, 30);
             button2.TabIndex = 22;
             button2.Text = "Pausar";
             button2.UseVisualStyleBackColor = true;
@@ -64,9 +68,9 @@
             // 
             // button1
             // 
-            button1.Location = new Point(359, 238);
+            button1.Location = new Point(716, 129);
             button1.Name = "button1";
-            button1.Size = new Size(86, 38);
+            button1.Size = new Size(72, 45);
             button1.TabIndex = 21;
             button1.Text = "Generar resumen";
             button1.UseVisualStyleBackColor = true;
@@ -75,7 +79,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(307, 5);
+            label4.Location = new Point(236, 5);
             label4.Name = "label4";
             label4.Size = new Size(133, 15);
             label4.TabIndex = 20;
@@ -84,17 +88,18 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(655, 17);
+            label2.Location = new Point(606, 36);
             label2.Name = "label2";
-            label2.Size = new Size(106, 30);
+            label2.Size = new Size(103, 45);
             label2.TabIndex = 18;
-            label2.Text = "Seleccionar tarjeta \r\nque desees pausar";
-            label2.TextAlign = ContentAlignment.TopCenter;
+            label2.Text = "Seleccionar tarjeta\r\na la cual quieras \r\ncambiar su estado";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            label2.Click += label2_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(437, 250);
+            label1.Location = new Point(607, 241);
             label1.Name = "label1";
             label1.Size = new Size(0, 15);
             label1.TabIndex = 17;
@@ -102,11 +107,11 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(223, 238);
+            label3.Location = new Point(605, 129);
             label3.Name = "label3";
-            label3.Size = new Size(130, 30);
+            label3.Size = new Size(105, 45);
             label3.TabIndex = 24;
-            label3.Text = "Seleccionar Tarjeta que \r\nquieras ver su resumen";
+            label3.Text = "Seleccionar Tarjeta\r\nque  quieras ver su\r\n resumen";
             // 
             // button3
             // 
@@ -120,9 +125,9 @@
             // 
             // button4
             // 
-            button4.Location = new Point(655, 142);
+            button4.Location = new Point(716, 43);
             button4.Name = "button4";
-            button4.Size = new Size(94, 39);
+            button4.Size = new Size(72, 30);
             button4.TabIndex = 27;
             button4.Text = "Activar";
             button4.UseVisualStyleBackColor = true;
@@ -131,18 +136,17 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(655, 109);
+            label5.Location = new Point(654, 79);
             label5.Name = "label5";
-            label5.Size = new Size(109, 30);
+            label5.Size = new Size(0, 15);
             label5.TabIndex = 26;
-            label5.Text = "Seleccionar tarjeta \r\nque deseees activar";
             label5.TextAlign = ContentAlignment.TopCenter;
             // 
             // button5
             // 
-            button5.Location = new Point(658, 226);
+            button5.Location = new Point(716, 79);
             button5.Name = "button5";
-            button5.Size = new Size(94, 39);
+            button5.Size = new Size(72, 30);
             button5.TabIndex = 29;
             button5.Text = "Bloquear";
             button5.UseVisualStyleBackColor = true;
@@ -151,18 +155,56 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(655, 193);
+            label6.Location = new Point(658, 159);
             label6.Name = "label6";
-            label6.Size = new Size(109, 30);
+            label6.Size = new Size(0, 15);
             label6.TabIndex = 28;
-            label6.Text = "Seleccionar tarjeta \r\nque deseees activar";
             label6.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // button6
+            // 
+            button6.Location = new Point(681, 240);
+            button6.Name = "button6";
+            button6.Size = new Size(74, 28);
+            button6.TabIndex = 30;
+            button6.Text = "Pagar ";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(664, 211);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(116, 23);
+            textBox1.TabIndex = 31;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(681, 193);
+            label7.Name = "label7";
+            label7.Size = new Size(86, 15);
+            label7.TabIndex = 32;
+            label7.Text = "Pago de deuda";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(615, 214);
+            label8.Name = "label8";
+            label8.Size = new Size(43, 15);
+            label8.TabIndex = 33;
+            label8.Text = "Monto";
             // 
             // MenuTarjetaCredito
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(792, 289);
+            ClientSize = new Size(800, 289);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(textBox1);
+            Controls.Add(button6);
             Controls.Add(button5);
             Controls.Add(label6);
             Controls.Add(button4);
@@ -197,5 +239,9 @@
         private Label label5;
         private Button button5;
         private Label label6;
+        private Button button6;
+        private TextBox textBox1;
+        private Label label7;
+        private Label label8;
     }
 }

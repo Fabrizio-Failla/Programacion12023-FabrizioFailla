@@ -66,6 +66,12 @@ namespace Front
 
 
         }
+
+        private void menuCliente_Load(object sender, EventArgs e)
+        {
+            listBox1.DisplayMember = "info_list_box";
+            listBox1.DataSource = principal.DevolverListaClientes();
+        }
     }
 
 }

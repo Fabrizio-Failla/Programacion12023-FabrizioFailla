@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button2 = new Button();
             listBox1 = new ListBox();
             button1 = new Button();
             textBox3 = new TextBox();
@@ -42,16 +41,6 @@
             button3 = new Button();
             button5 = new Button();
             SuspendLayout();
-            // 
-            // button2
-            // 
-            button2.Location = new Point(340, 217);
-            button2.Name = "button2";
-            button2.Size = new Size(106, 42);
-            button2.TabIndex = 22;
-            button2.Text = "Mostrar clientes";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // listBox1
             // 
@@ -139,7 +128,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(489, 217);
+            button3.Location = new Point(326, 217);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 24;
@@ -149,7 +138,7 @@
             // 
             // button5
             // 
-            button5.Location = new Point(4, 251);
+            button5.Location = new Point(4, 206);
             button5.Name = "button5";
             button5.Size = new Size(75, 23);
             button5.TabIndex = 27;
@@ -161,10 +150,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(578, 286);
+            ClientSize = new Size(578, 250);
             Controls.Add(button5);
             Controls.Add(button3);
-            Controls.Add(button2);
             Controls.Add(listBox1);
             Controls.Add(button1);
             Controls.Add(textBox3);
@@ -177,13 +165,12 @@
             Controls.Add(label1);
             Name = "menuCliente";
             Text = "menuCliente";
+            Load += menuCliente_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button button2;
         private ListBox listBox1;
         private Button button1;
         private TextBox textBox3;

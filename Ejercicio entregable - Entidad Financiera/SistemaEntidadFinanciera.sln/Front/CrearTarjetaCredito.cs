@@ -46,6 +46,7 @@ namespace Front
             tarjetaCredito.LimiteCredito = double.Parse(textBox2.Text);
             tarjetaCredito.SaldoDisponible = double.Parse(textBox3.Text);
             tarjetaCredito.Estado = comboBox1.SelectedItem.ToString();
+            tarjetaCredito.MontoDeuda = double.Parse(textBox4.Text);
             principal.EmitirTarjetaCredito(tarjetaCredito);
 
             MessageBox.Show("Se a emitido la tarjeta exitosamente");
@@ -55,6 +56,7 @@ namespace Front
             textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
+            textBox4.Clear();
 
         }
 
@@ -81,6 +83,12 @@ namespace Front
         }
 
         private void CrearTarjetaCredito_Load(object sender, EventArgs e)
+        {
+            listBox1.DisplayMember = "info_list_box";
+            listBox1.DataSource = principal.DevolverListaTarjetaCredito();
+        }
+
+        private void label9_Click_1(object sender, EventArgs e)
         {
 
         }

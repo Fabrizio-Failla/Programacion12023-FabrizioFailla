@@ -32,7 +32,6 @@
             button3 = new Button();
             label8 = new Label();
             label7 = new Label();
-            button2 = new Button();
             listBox1 = new ListBox();
             button1 = new Button();
             textBox2 = new TextBox();
@@ -46,6 +45,9 @@
             textBox3 = new TextBox();
             comboBox1 = new ComboBox();
             label10 = new Label();
+            textBox4 = new TextBox();
+            label9 = new Label();
+            label11 = new Label();
             SuspendLayout();
             // 
             // button5
@@ -60,7 +62,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(383, 232);
+            button3.Location = new Point(504, 232);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 55;
@@ -86,16 +88,6 @@
             label7.TabIndex = 52;
             label7.Text = "Limite de Credito";
             // 
-            // button2
-            // 
-            button2.Location = new Point(491, 232);
-            button2.Name = "button2";
-            button2.Size = new Size(84, 28);
-            button2.TabIndex = 51;
-            button2.Text = "Mostrar clientes";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
             // listBox1
             // 
             listBox1.FormattingEnabled = true;
@@ -107,7 +99,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(117, 162);
+            button1.Location = new Point(116, 188);
             button1.Name = "button1";
             button1.Size = new Size(122, 43);
             button1.TabIndex = 49;
@@ -204,11 +196,39 @@
             label10.Size = new Size(0, 15);
             label10.TabIndex = 59;
             // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(116, 159);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(122, 23);
+            textBox4.TabIndex = 62;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(6, 159);
+            label9.Name = "label9";
+            label9.Size = new Size(79, 15);
+            label9.TabIndex = 61;
+            label9.Text = "Monto deuda";
+            label9.Click += label9_Click_1;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(50, 159);
+            label11.Name = "label11";
+            label11.Size = new Size(0, 15);
+            label11.TabIndex = 60;
+            // 
             // CrearTarjetaCredito
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(847, 286);
+            Controls.Add(textBox4);
+            Controls.Add(label9);
+            Controls.Add(label11);
             Controls.Add(label10);
             Controls.Add(comboBox1);
             Controls.Add(textBox3);
@@ -216,7 +236,6 @@
             Controls.Add(button3);
             Controls.Add(label8);
             Controls.Add(label7);
-            Controls.Add(button2);
             Controls.Add(listBox1);
             Controls.Add(button1);
             Controls.Add(textBox2);
@@ -240,7 +259,6 @@
         private Button button3;
         private Label label8;
         private Label label7;
-        private Button button2;
         private ListBox listBox1;
         private Button button1;
         private TextBox textBox2;
@@ -254,5 +272,8 @@
         private TextBox textBox3;
         private ComboBox comboBox1;
         private Label label10;
+        private TextBox textBox4;
+        private Label label9;
+        private Label label11;
     }
 }

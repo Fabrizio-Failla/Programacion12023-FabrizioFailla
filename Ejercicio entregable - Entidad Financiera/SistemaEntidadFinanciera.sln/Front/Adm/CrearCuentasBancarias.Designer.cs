@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button2 = new Button();
             listBox1 = new ListBox();
             button1 = new Button();
             textBox2 = new TextBox();
@@ -44,16 +43,6 @@
             button3 = new Button();
             button5 = new Button();
             SuspendLayout();
-            // 
-            // button2
-            // 
-            button2.Location = new Point(415, 251);
-            button2.Name = "button2";
-            button2.Size = new Size(84, 28);
-            button2.TabIndex = 33;
-            button2.Text = "Mostrar clientes";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // listBox1
             // 
@@ -159,7 +148,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(283, 251);
+            button3.Location = new Point(413, 251);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 39;
@@ -187,7 +176,6 @@
             Controls.Add(comboBox1);
             Controls.Add(label8);
             Controls.Add(label7);
-            Controls.Add(button2);
             Controls.Add(listBox1);
             Controls.Add(button1);
             Controls.Add(textBox2);
@@ -204,8 +192,6 @@
         }
 
         #endregion
-
-        private Button button2;
         private ListBox listBox1;
         private Button button1;
         private TextBox textBox2;

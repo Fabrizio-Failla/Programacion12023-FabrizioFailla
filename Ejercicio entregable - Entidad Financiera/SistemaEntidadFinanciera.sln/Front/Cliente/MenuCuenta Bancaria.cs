@@ -60,7 +60,8 @@ namespace Front
                 {
                     int seleccion = dataGridView1.CurrentCellAddress.Y;
                     //int cuentaId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Id"].Value);
-                    principal.RealizarDeposito((int)dataGridView1[0, seleccion].Value, double.Parse(textBox1.Text));
+                    string mensaje= principal.RealizarDeposito((int)dataGridView1[0, seleccion].Value, double.Parse(textBox1.Text));
+                    MessageBox.Show(mensaje);
                     ActualizarGridVie();
                 }
             }
@@ -83,7 +84,8 @@ namespace Front
                 {
                     int seleccion = dataGridView1.CurrentCellAddress.Y;
                     //int cuentaId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Id"].Value);
-                    principal.RealizarExtraccion((int)dataGridView1[0,seleccion].Value, double.Parse(textBox2.Text));
+                    string mensaje= principal.RealizarExtraccion((int)dataGridView1[0,seleccion].Value, double.Parse(textBox2.Text));
+                    MessageBox.Show(mensaje);
                     ActualizarGridVie();
                 }
             }
@@ -116,7 +118,8 @@ namespace Front
                 int cuentaOrigenId = Convert.ToInt32(textBox3.Text);
                 int cuentaDestinoId = Convert.ToInt32(textBox4.Text);
                 double monto = double.Parse(textBox5.Text);
-                principal.RealizarTransferencia(cuentaOrigenId, cuentaDestinoId, monto);
+                string mensaje= principal.RealizarTransferencia(cuentaOrigenId, cuentaDestinoId, monto);
+                MessageBox.Show(mensaje);
                 ActualizarGridVie();              
             }
           

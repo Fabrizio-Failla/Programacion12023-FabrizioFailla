@@ -25,7 +25,8 @@ namespace Front
 
         private void CrearCuentasBancarias_Load(object sender, EventArgs e)
         {
-
+            listBox1.DisplayMember = "info_list_box";
+            listBox1.DataSource = principal.DevolverListaCuentaBancaria();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -65,6 +66,8 @@ namespace Front
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+
             listBox1.DisplayMember = "info_list_box";
             listBox1.DataSource = principal.DevolverListaCuentaBancaria();
         }

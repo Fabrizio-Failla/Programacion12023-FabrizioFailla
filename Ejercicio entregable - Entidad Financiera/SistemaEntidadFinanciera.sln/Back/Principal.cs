@@ -100,13 +100,18 @@ namespace Back
                 context.SaveChanges();
             }
         }
-        public void RealizarDeposito(int cuentaID, double monto)
+        public string RealizarDeposito(int cuentaID, double monto)
         {
             var cuenta = context.CuentaBancarias.Find(cuentaID);
             if (cuenta != null)
             {
                 cuenta.Saldo += monto;
                 context.SaveChanges();
+                return "El dinero se a depositado correctamente";
+            }
+            else
+            {
+                return "No se a encontrado la cuenta para poder realizar el deposito";
             }
         }
 
@@ -121,12 +126,12 @@ namespace Back
             }
             else
             {
-                return "No se a encontrado la cuenta";
+                return "El dinero que desas extraer es superior de tu saldo";
             }
 
 
         }
-        public void RealizarTransferencia(int cuentaOrigenId, int cuentaDestinoId, double monto)
+        public string RealizarTransferencia(int cuentaOrigenId, int cuentaDestinoId, double monto)
         {
             var cuentaOrigen = context.CuentaBancarias.Find(cuentaOrigenId);
             var cuentaDestino = context.CuentaBancarias.Find(cuentaDestinoId);
@@ -136,10 +141,15 @@ namespace Back
                 cuentaOrigen.Saldo -= monto;
                 cuentaDestino.Saldo += monto;
                 context.SaveChanges();
+                return "La transferencia sea a realizado con exito";
+            }
+            else
+            {
+                return "No se a encontrado una de las cuentas o el saldo es inferior ";
             }
             
         }
-        /*public void PagarTarjetaCredito(int tarjetaId, double monto)
+        public string PagarTarjetaCredito(int tarjetaId, double monto)
         {
             var tarjeta = context.TarjetaCreditos.Find(tarjetaId);
             if (tarjeta != null && tarjeta.Estado == "Activa")
@@ -148,10 +158,18 @@ namespace Back
                 {
                     tarjeta.MontoDeuda -= monto;
                     context.SaveChanges();
+                    
                 }
+                return "Se a pagado la deuda correctamente";
             }
+            else
+            {
+                return "La cuenta no se encuentra activa";
+            }
+            
+
         }
-        */
+        
         public string GenerarResumenTarjeta(int tarjetaID)
         {
             var resumen = context.TarjetaCreditos.Find(tarjetaID);

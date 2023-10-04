@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Front
 {
@@ -86,6 +87,32 @@ namespace Front
             }
             else
             { MessageBox.Show("seleccionar una casilla"); }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentCell != null)
+            {
+                if (textBox1.Text == "")
+                {
+                    MessageBox.Show("Complete el campo monto nuevamente.");
+                }
+                else
+                {
+                    int seleccion = dataGridView1.CurrentCellAddress.Y;
+                    //int cuentaId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Id"].Value);
+                    string mensaje = principal.PagarTarjetaCredito((int)dataGridView1[0, seleccion].Value, double.Parse(textBox1.Text));
+                    MessageBox.Show(mensaje);
+                    ActualizarGridVie();
+                    textBox1.Clear();
+
+                }
+            }
         }
     }
 }
