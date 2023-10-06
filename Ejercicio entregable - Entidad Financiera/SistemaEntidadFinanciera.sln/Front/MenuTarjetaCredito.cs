@@ -55,7 +55,9 @@ namespace Front
 
         private void MenuTarjetaCredito_Load(object sender, EventArgs e)
         {
+            dataGridView1.ReadOnly = true;
             dataGridView1.DataSource = principal.DevolverListaTarjetaCredito();
+
         }
 
         private void button3_Click(object sender, EventArgs e)

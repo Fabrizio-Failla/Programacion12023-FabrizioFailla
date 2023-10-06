@@ -65,6 +65,7 @@ namespace Front
 
         private void menuCliente_Load(object sender, EventArgs e)
         {
+            dataGridView1.ReadOnly = true;
             dataGridView1.DataSource = principal.DevolverListaClientes();
 
         }

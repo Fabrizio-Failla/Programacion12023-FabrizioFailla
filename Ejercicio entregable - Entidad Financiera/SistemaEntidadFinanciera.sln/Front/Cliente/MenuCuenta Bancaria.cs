@@ -29,6 +29,7 @@ namespace Front
 
         private void MenuCuenta_Bancaria_Load(object sender, EventArgs e)
         {
+            dataGridView1.ReadOnly = true;
             dataGridView1.DataSource = principal.DevolverListaCuentaBancaria();
         }
 
