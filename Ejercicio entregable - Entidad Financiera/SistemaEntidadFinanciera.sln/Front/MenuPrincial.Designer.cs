@@ -31,43 +31,55 @@
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // button3
             // 
-            button3.Location = new Point(132, 192);
+            button3.Location = new Point(118, 194);
             button3.Name = "button3";
             button3.Size = new Size(224, 41);
             button3.TabIndex = 5;
-            button3.Text = "Menu Tarjetas de Credito";
+            button3.Text = "Transacción Tarjetas de Credito";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click_1;
             // 
             // button2
             // 
-            button2.Location = new Point(132, 97);
+            button2.Location = new Point(118, 103);
             button2.Name = "button2";
             button2.Size = new Size(224, 73);
             button2.TabIndex = 4;
-            button2.Text = "Administrar Cuentas \r\nClientes\r\nCuentas bancarias\r\ntarjetas de credito";
+            button2.Text = "Emitir Cuentas \r\nClientes\r\nCuentas bancarias\r\ntarjetas de credito";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click_1;
             // 
             // button1
             // 
-            button1.Location = new Point(132, 33);
+            button1.Location = new Point(118, 47);
             button1.Name = "button1";
             button1.Size = new Size(224, 41);
             button1.TabIndex = 3;
-            button1.Text = "Menu Cuenta Corriente";
+            button1.Text = "Transacción de Cuenta Corriente";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click_1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(115, 18);
+            label1.Name = "label1";
+            label1.Size = new Size(227, 15);
+            label1.TabIndex = 6;
+            label1.Text = "Bienvenido a la administracion del Banco ";
+            label1.Click += label1_Click;
             // 
             // MenuPrincial
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(469, 245);
+            ClientSize = new Size(476, 277);
+            Controls.Add(label1);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -75,6 +87,7 @@
             Text = "MenuPrincial";
             Load += MenuPrincial_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -82,5 +95,6 @@
         private Button button3;
         private Button button2;
         private Button button1;
+        private Label label1;
     }
 }

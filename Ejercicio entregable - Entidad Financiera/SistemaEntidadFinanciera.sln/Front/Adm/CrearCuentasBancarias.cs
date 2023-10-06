@@ -17,6 +17,7 @@ namespace Front
         ApplicationDbContext context = new ApplicationDbContext();
         public CrearCuentasBancarias()
         {
+
             InitializeComponent();
             comboBox1.Items.Add("Ahorro");
             comboBox1.Items.Add("Corriente");

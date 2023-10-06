@@ -114,5 +114,10 @@ namespace Front
                 }
             }
         }
+
+        private void tarjetaCreditoBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

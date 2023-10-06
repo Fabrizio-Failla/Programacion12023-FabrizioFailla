@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
             button2 = new Button();
             button1 = new Button();
             label4 = new Label();
@@ -44,21 +43,13 @@
             textBox1 = new TextBox();
             label7 = new Label();
             label8 = new Label();
+            dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(3, 23);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(596, 235);
-            dataGridView1.TabIndex = 23;
-            // 
             // button2
             // 
-            button2.Location = new Point(716, 7);
+            button2.Location = new Point(749, 17);
             button2.Name = "button2";
             button2.Size = new Size(72, 30);
             button2.TabIndex = 22;
@@ -68,7 +59,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(716, 129);
+            button1.Location = new Point(749, 139);
             button1.Name = "button1";
             button1.Size = new Size(72, 45);
             button1.TabIndex = 21;
@@ -88,7 +79,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(606, 36);
+            label2.Location = new Point(639, 46);
             label2.Name = "label2";
             label2.Size = new Size(103, 45);
             label2.TabIndex = 18;
@@ -107,7 +98,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(605, 129);
+            label3.Location = new Point(638, 139);
             label3.Name = "label3";
             label3.Size = new Size(105, 45);
             label3.TabIndex = 24;
@@ -125,7 +116,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(716, 43);
+            button4.Location = new Point(749, 53);
             button4.Name = "button4";
             button4.Size = new Size(72, 30);
             button4.TabIndex = 27;
@@ -136,7 +127,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(654, 79);
+            label5.Location = new Point(687, 89);
             label5.Name = "label5";
             label5.Size = new Size(0, 15);
             label5.TabIndex = 26;
@@ -144,7 +135,7 @@
             // 
             // button5
             // 
-            button5.Location = new Point(716, 79);
+            button5.Location = new Point(749, 89);
             button5.Name = "button5";
             button5.Size = new Size(72, 30);
             button5.TabIndex = 29;
@@ -155,7 +146,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(658, 159);
+            label6.Location = new Point(691, 169);
             label6.Name = "label6";
             label6.Size = new Size(0, 15);
             label6.TabIndex = 28;
@@ -163,7 +154,7 @@
             // 
             // button6
             // 
-            button6.Location = new Point(681, 240);
+            button6.Location = new Point(717, 308);
             button6.Name = "button6";
             button6.Size = new Size(74, 28);
             button6.TabIndex = 30;
@@ -173,7 +164,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(664, 211);
+            textBox1.Location = new Point(700, 279);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(116, 23);
             textBox1.TabIndex = 31;
@@ -181,7 +172,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(681, 193);
+            label7.Location = new Point(717, 261);
             label7.Name = "label7";
             label7.Size = new Size(86, 15);
             label7.TabIndex = 32;
@@ -190,17 +181,27 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(615, 214);
+            label8.Location = new Point(651, 282);
             label8.Name = "label8";
             label8.Size = new Size(43, 15);
             label8.TabIndex = 33;
             label8.Text = "Monto";
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(3, 36);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(630, 202);
+            dataGridView1.TabIndex = 34;
+            // 
             // MenuTarjetaCredito
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 289);
+            ClientSize = new Size(830, 360);
+            Controls.Add(dataGridView1);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(textBox1);
@@ -211,7 +212,6 @@
             Controls.Add(label5);
             Controls.Add(button3);
             Controls.Add(label3);
-            Controls.Add(dataGridView1);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label4);
@@ -226,8 +226,6 @@
         }
 
         #endregion
-
-        private DataGridView dataGridView1;
         private Button button2;
         private Button button1;
         private Label label4;
@@ -243,5 +241,6 @@
         private TextBox textBox1;
         private Label label7;
         private Label label8;
+        private DataGridView dataGridView1;
     }
 }
