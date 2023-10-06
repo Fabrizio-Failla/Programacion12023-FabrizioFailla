@@ -36,7 +36,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(118, 194);
+            button3.Location = new Point(118, 153);
             button3.Name = "button3";
             button3.Size = new Size(224, 41);
             button3.TabIndex = 5;
@@ -46,21 +46,21 @@
             // 
             // button2
             // 
-            button2.Location = new Point(118, 103);
+            button2.Location = new Point(118, 59);
             button2.Name = "button2";
-            button2.Size = new Size(224, 73);
+            button2.Size = new Size(224, 41);
             button2.TabIndex = 4;
-            button2.Text = "Emitir Cuentas \r\nClientes\r\nCuentas bancarias\r\ntarjetas de credito";
+            button2.Text = "Aministrar Cuentas Cliente";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click_1;
             // 
             // button1
             // 
-            button1.Location = new Point(118, 47);
+            button1.Location = new Point(118, 106);
             button1.Name = "button1";
             button1.Size = new Size(224, 41);
             button1.TabIndex = 3;
-            button1.Text = "Transacción de Cuenta Corriente";
+            button1.Text = "Transacción de Cuenta Bancaria";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click_1;
             // 
@@ -78,7 +78,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(476, 277);
+            ClientSize = new Size(469, 230);
             Controls.Add(label1);
             Controls.Add(button3);
             Controls.Add(button2);

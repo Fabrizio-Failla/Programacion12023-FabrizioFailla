@@ -128,7 +128,6 @@ C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Ejercicio entre
 C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Ejercicio entregable - Entidad Financiera\SistemaEntidadFinanciera.sln\Front\obj\Debug\net6.0-windows\Front.menuCliente.resources
 C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Ejercicio entregable - Entidad Financiera\SistemaEntidadFinanciera.sln\Front\obj\Debug\net6.0-windows\Front.CrearCuentasBancarias.resources
 C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Ejercicio entregable - Entidad Financiera\SistemaEntidadFinanciera.sln\Front\obj\Debug\net6.0-windows\Front.MenuCuenta_Bancaria.resources
-C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Ejercicio entregable - Entidad Financiera\SistemaEntidadFinanciera.sln\Front\obj\Debug\net6.0-windows\Front.MenuPrincipalDeAdm.resources
 C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Ejercicio entregable - Entidad Financiera\SistemaEntidadFinanciera.sln\Front\obj\Debug\net6.0-windows\Front.MenuPrincial.resources
 C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Ejercicio entregable - Entidad Financiera\SistemaEntidadFinanciera.sln\Front\obj\Debug\net6.0-windows\Front.CrearTarjetaCredito.resources
 C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\Ejercicio entregable - Entidad Financiera\SistemaEntidadFinanciera.sln\Front\obj\Debug\net6.0-windows\Front.MenuTarjetaCredito.resources

@@ -119,5 +119,28 @@ namespace Front
         {
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            CrearTarjetaCredito crear = new CrearTarjetaCredito();
+            crear.Show();
+            this.Hide();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentCell != null)
+            {
+                int seleccion = dataGridView1.CurrentCellAddress.Y;
+                int idTarjeta = (int)dataGridView1[0, seleccion].Value;             
+                Back.TarjetaCredito tarjeta = new Back.TarjetaCredito { Id = idTarjeta };
+                principal.Eliminartarjetas(tarjeta);
+                ActualizarGridVie();
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una casilla");
+            }
+        }
     }
 }

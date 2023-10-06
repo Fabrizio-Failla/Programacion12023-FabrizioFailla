@@ -28,7 +28,7 @@ namespace Front
 
         private void button5_Click(object sender, EventArgs e)
         {
-            MenuPrincipalDeAdm crear = new MenuPrincipalDeAdm();
+            MenuTarjetaCredito crear = new MenuTarjetaCredito();
             crear.Show();
             this.Hide();
 
@@ -50,9 +50,7 @@ namespace Front
             principal.EmitirTarjetaCredito(tarjetaCredito);
 
             MessageBox.Show("Se a emitido la tarjeta exitosamente");
-            listBox1.DataSource = null;
-            listBox1.DisplayMember = "info_list_box";
-            listBox1.DataSource = principal.DevolverListaTarjetaCredito();
+            principal.DevolverListaTarjetaCredito();
             textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
@@ -62,18 +60,11 @@ namespace Front
 
         private void button2_Click(object sender, EventArgs e)
         {
-            listBox1.DisplayMember = "info_list_box";
-            listBox1.DataSource = principal.DevolverListaTarjetaCredito();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            TarjetaCredito itemSeleccionado = (TarjetaCredito)listBox1.SelectedItem;
-            listBox1.DataSource = null;
-            principal.Eliminartarjetas(itemSeleccionado);
-            listBox1.DisplayMember = "info_list_box";
-            listBox1.DataSource = principal.DevolverListaTarjetaCredito();
-            _ = MessageBox.Show("La tarjeta se a eliminado con éxito");
 
         }
 
@@ -84,8 +75,7 @@ namespace Front
 
         private void CrearTarjetaCredito_Load(object sender, EventArgs e)
         {
-            listBox1.DisplayMember = "info_list_box";
-            listBox1.DataSource = principal.DevolverListaTarjetaCredito();
+
         }
 
         private void label9_Click_1(object sender, EventArgs e)

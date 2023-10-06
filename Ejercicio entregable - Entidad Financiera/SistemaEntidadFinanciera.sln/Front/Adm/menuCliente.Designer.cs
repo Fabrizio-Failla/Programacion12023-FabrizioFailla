@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            listBox1 = new ListBox();
             button1 = new Button();
             textBox3 = new TextBox();
             textBox2 = new TextBox();
@@ -38,18 +37,11 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            button3 = new Button();
             button5 = new Button();
+            dataGridView1 = new DataGridView();
+            button2 = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // listBox1
-            // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(189, 12);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(375, 199);
-            listBox1.TabIndex = 21;
             // 
             // button1
             // 
@@ -126,16 +118,6 @@
             label1.Size = new Size(0, 15);
             label1.TabIndex = 12;
             // 
-            // button3
-            // 
-            button3.Location = new Point(326, 217);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 24;
-            button3.Text = "Eliminar";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
             // button5
             // 
             button5.Location = new Point(4, 206);
@@ -146,14 +128,34 @@
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(216, 24);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(447, 180);
+            dataGridView1.TabIndex = 28;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(409, 210);
+            button2.Name = "button2";
+            button2.Size = new Size(113, 28);
+            button2.TabIndex = 29;
+            button2.Text = "Eliminar Clientes";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click_1;
+            // 
             // menuCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(578, 250);
+            ClientSize = new Size(675, 250);
+            Controls.Add(button2);
+            Controls.Add(dataGridView1);
             Controls.Add(button5);
-            Controls.Add(button3);
-            Controls.Add(listBox1);
             Controls.Add(button1);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
@@ -166,12 +168,12 @@
             Name = "menuCliente";
             Text = "menuCliente";
             Load += menuCliente_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private ListBox listBox1;
         private Button button1;
         private TextBox textBox3;
         private TextBox textBox2;
@@ -181,7 +183,8 @@
         private Label label3;
         private Label label2;
         private Label label1;
-        private Button button3;
         private Button button5;
+        private DataGridView dataGridView1;
+        private Button button2;
     }
 }

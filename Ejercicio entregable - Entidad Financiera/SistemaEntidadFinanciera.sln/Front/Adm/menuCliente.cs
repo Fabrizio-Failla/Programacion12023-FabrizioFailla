@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Front
 {
@@ -15,6 +16,11 @@ namespace Front
     {
         Principal principal = new Principal();
         ApplicationDbContext context = new ApplicationDbContext();
+        private void ActualizarGridVie()
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = principal.DevolverListaClientes();
+        }
         public menuCliente()
         {
             InitializeComponent();
@@ -26,13 +32,9 @@ namespace Front
             nuevocliente.Nombre = textBox1.Text;
             nuevocliente.Apellido = textBox2.Text;
             nuevocliente.Dni = int.Parse(textBox3.Text);
-
             principal.AgregarCliente(nuevocliente);
-
             MessageBox.Show("Se a creado la cuenta exitosamente");
-            listBox1.DataSource = null;
-            listBox1.DisplayMember = "info_list_box";
-            listBox1.DataSource = principal.DevolverListaClientes();
+            principal.DevolverListaClientes();
             textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
@@ -40,23 +42,17 @@ namespace Front
 
         private void button2_Click(object sender, EventArgs e)
         {
-            listBox1.DisplayMember = "info_list_box";
-            listBox1.DataSource = principal.DevolverListaClientes();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Cliente itemSeleccionado = (Cliente)listBox1.SelectedItem;
-            listBox1.DataSource = null;
-            principal.EliminarCLiente(itemSeleccionado);
-            listBox1.DisplayMember = "info_list_box";
-            listBox1.DataSource = principal.DevolverListaClientes();
-            _ = MessageBox.Show("El cliente se a eliminado con éxito");
+
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            MenuPrincipalDeAdm menuPrincipal = new MenuPrincipalDeAdm();
+            MenuPrincial menuPrincipal = new MenuPrincial();
             menuPrincipal.Show();
             this.Hide();
         }
@@ -69,8 +65,30 @@ namespace Front
 
         private void menuCliente_Load(object sender, EventArgs e)
         {
-            listBox1.DisplayMember = "info_list_box";
-            listBox1.DataSource = principal.DevolverListaClientes();
+            dataGridView1.DataSource = principal.DevolverListaClientes();
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentCell != null)
+            {
+                int seleccion = dataGridView1.CurrentCellAddress.Y;
+                int idCliente = (int)dataGridView1[0, seleccion].Value;
+                // Ahora, necesitas crear una instancia de CuentaBancaria con el ID
+                Back.Cliente cliente = new Back.Cliente { Id = idCliente };
+                principal.EliminarCLiente(cliente);
+                ActualizarGridVie();
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una casilla");
+            }
         }
     }
 

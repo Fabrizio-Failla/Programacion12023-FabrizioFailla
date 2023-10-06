@@ -47,19 +47,21 @@
             textBox5 = new TextBox();
             button4 = new Button();
             label9 = new Label();
+            button5 = new Button();
+            button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(640, 46);
+            textBox1.Location = new Point(359, 242);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(132, 23);
             textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(640, 152);
+            textBox2.Location = new Point(586, 239);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(132, 23);
             textBox2.TabIndex = 1;
@@ -67,7 +69,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(644, 27);
+            label1.Location = new Point(363, 223);
             label1.Name = "label1";
             label1.Size = new Size(113, 15);
             label1.TabIndex = 2;
@@ -76,7 +78,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(657, 135);
+            label2.Location = new Point(603, 222);
             label2.Name = "label2";
             label2.Size = new Size(98, 15);
             label2.TabIndex = 3;
@@ -85,7 +87,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(591, 155);
+            label3.Location = new Point(537, 242);
             label3.Name = "label3";
             label3.Size = new Size(43, 15);
             label3.TabIndex = 4;
@@ -94,7 +96,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(591, 49);
+            label4.Location = new Point(310, 245);
             label4.Name = "label4";
             label4.Size = new Size(43, 15);
             label4.TabIndex = 5;
@@ -102,7 +104,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(661, 75);
+            button1.Location = new Point(380, 271);
             button1.Name = "button1";
             button1.Size = new Size(75, 38);
             button1.TabIndex = 6;
@@ -112,9 +114,9 @@
             // 
             // button2
             // 
-            button2.Location = new Point(657, 181);
+            button2.Location = new Point(615, 276);
             button2.Name = "button2";
-            button2.Size = new Size(94, 39);
+            button2.Size = new Size(75, 38);
             button2.TabIndex = 7;
             button2.Text = "Retirar";
             button2.UseVisualStyleBackColor = true;
@@ -122,9 +124,9 @@
             // 
             // button3
             // 
-            button3.Location = new Point(147, 346);
+            button3.Location = new Point(155, 320);
             button3.Name = "button3";
-            button3.Size = new Size(94, 39);
+            button3.Size = new Size(73, 38);
             button3.TabIndex = 11;
             button3.Text = "Transferir";
             button3.UseVisualStyleBackColor = true;
@@ -133,7 +135,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(34, 320);
+            label5.Location = new Point(27, 294);
             label5.Name = "label5";
             label5.Size = new Size(43, 15);
             label5.TabIndex = 10;
@@ -143,7 +145,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(116, 238);
+            label6.Location = new Point(109, 212);
             label6.Name = "label6";
             label6.Size = new Size(141, 15);
             label6.TabIndex = 9;
@@ -151,7 +153,7 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(116, 256);
+            textBox3.Location = new Point(109, 230);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(161, 23);
             textBox3.TabIndex = 8;
@@ -159,17 +161,17 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 27);
+            dataGridView1.Location = new Point(109, 27);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(573, 204);
+            dataGridView1.Size = new Size(449, 165);
             dataGridView1.TabIndex = 14;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(3, 290);
+            label7.Location = new Point(0, 263);
             label7.Name = "label7";
             label7.Size = new Size(107, 15);
             label7.TabIndex = 16;
@@ -177,7 +179,7 @@
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(116, 286);
+            textBox4.Location = new Point(109, 260);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(161, 23);
             textBox4.TabIndex = 15;
@@ -185,7 +187,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(7, 260);
+            label8.Location = new Point(0, 234);
             label8.Name = "label8";
             label8.Size = new Size(103, 15);
             label8.TabIndex = 17;
@@ -193,16 +195,16 @@
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(116, 317);
+            textBox5.Location = new Point(109, 291);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(161, 23);
             textBox5.TabIndex = 18;
             // 
             // button4
             // 
-            button4.Location = new Point(686, 347);
+            button4.Location = new Point(714, 320);
             button4.Name = "button4";
-            button4.Size = new Size(86, 38);
+            button4.Size = new Size(57, 24);
             button4.TabIndex = 19;
             button4.Text = "Volver";
             button4.UseVisualStyleBackColor = true;
@@ -217,11 +219,33 @@
             label9.TabIndex = 20;
             label9.Text = "Cuenta Bancaria";
             // 
+            // button5
+            // 
+            button5.Location = new Point(564, 123);
+            button5.Name = "button5";
+            button5.Size = new Size(79, 42);
+            button5.TabIndex = 21;
+            button5.Text = "Agregar Cuentas Bancarias";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
+            // button6
+            // 
+            button6.Location = new Point(564, 46);
+            button6.Name = "button6";
+            button6.Size = new Size(79, 39);
+            button6.TabIndex = 22;
+            button6.Text = "Eliminar Cuentas";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
             // MenuCuenta_Bancaria
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(783, 397);
+            ClientSize = new Size(783, 363);
+            Controls.Add(button6);
+            Controls.Add(button5);
             Controls.Add(label9);
             Controls.Add(button4);
             Controls.Add(textBox5);
@@ -270,5 +294,7 @@
         private TextBox textBox5;
         private Button button4;
         private Label label9;
+        private Button button5;
+        private Button button6;
     }
 }

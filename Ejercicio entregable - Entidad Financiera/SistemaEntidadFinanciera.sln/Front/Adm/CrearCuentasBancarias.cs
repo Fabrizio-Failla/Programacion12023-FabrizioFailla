@@ -26,8 +26,7 @@ namespace Front
 
         private void CrearCuentasBancarias_Load(object sender, EventArgs e)
         {
-            listBox1.DisplayMember = "info_list_box";
-            listBox1.DataSource = principal.DevolverListaCuentaBancaria();
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -47,9 +46,8 @@ namespace Front
             principal.CrearCuentaBancaria(cuentabancaria);
 
             MessageBox.Show("Se a creado la cuenta exitosamente");
-            listBox1.DataSource = null;
-            listBox1.DisplayMember = "info_list_box";
-            listBox1.DataSource = principal.DevolverListaCuentaBancaria();
+           
+            principal.DevolverListaCuentaBancaria();
             textBox1.Clear();
             textBox2.Clear();
 
@@ -57,25 +55,16 @@ namespace Front
 
         private void button3_Click(object sender, EventArgs e)
         {
-            CuentaBancaria itemSeleccionado = (CuentaBancaria)listBox1.SelectedItem;
-            listBox1.DataSource = null;
-            principal.EliminarCuentaBancaria(itemSeleccionado);
-            listBox1.DisplayMember = "info_list_box";
-            listBox1.DataSource = principal.DevolverListaCuentaBancaria();
-            _ = MessageBox.Show("La cuenta se a eliminado con éxito");
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-
-            listBox1.DisplayMember = "info_list_box";
-            listBox1.DataSource = principal.DevolverListaCuentaBancaria();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            MenuPrincipalDeAdm crear = new MenuPrincipalDeAdm();
+            MenuCuenta_Bancaria crear = new MenuCuenta_Bancaria();
             crear.Show();
             this.Hide();
         }

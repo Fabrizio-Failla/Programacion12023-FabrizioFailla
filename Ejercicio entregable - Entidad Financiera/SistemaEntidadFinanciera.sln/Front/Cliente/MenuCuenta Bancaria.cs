@@ -60,14 +60,14 @@ namespace Front
                 {
                     int seleccion = dataGridView1.CurrentCellAddress.Y;
                     //int cuentaId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Id"].Value);
-                    string mensaje= principal.RealizarDeposito((int)dataGridView1[0, seleccion].Value, double.Parse(textBox1.Text));
+                    string mensaje = principal.RealizarDeposito((int)dataGridView1[0, seleccion].Value, double.Parse(textBox1.Text));
                     MessageBox.Show(mensaje);
                     ActualizarGridVie();
                 }
             }
-            else 
+            else
             {
-                MessageBox.Show("seleccionar una casilla"); 
+                MessageBox.Show("seleccionar una casilla");
             }
 
         }
@@ -84,21 +84,22 @@ namespace Front
                 {
                     int seleccion = dataGridView1.CurrentCellAddress.Y;
                     //int cuentaId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Id"].Value);
-                    string mensaje= principal.RealizarExtraccion((int)dataGridView1[0,seleccion].Value, double.Parse(textBox2.Text));
+                    string mensaje = principal.RealizarExtraccion((int)dataGridView1[0, seleccion].Value, double.Parse(textBox2.Text));
                     MessageBox.Show(mensaje);
                     ActualizarGridVie();
                 }
             }
-            else 
+            else
             {
-                MessageBox.Show("seleccionar una casilla"); 
+                MessageBox.Show("seleccionar una casilla");
             }
-               
+
 
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
 
         }
 
@@ -118,11 +119,11 @@ namespace Front
                 int cuentaOrigenId = Convert.ToInt32(textBox3.Text);
                 int cuentaDestinoId = Convert.ToInt32(textBox4.Text);
                 double monto = double.Parse(textBox5.Text);
-                string mensaje= principal.RealizarTransferencia(cuentaOrigenId, cuentaDestinoId, monto);
+                string mensaje = principal.RealizarTransferencia(cuentaOrigenId, cuentaDestinoId, monto);
                 MessageBox.Show(mensaje);
-                ActualizarGridVie();              
+                ActualizarGridVie();
             }
-          
+
         }
 
         private void button4_Click_1(object sender, EventArgs e)
@@ -130,6 +131,32 @@ namespace Front
             MenuPrincial crear = new MenuPrincial();
             crear.Show();
             this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            CrearCuentasBancarias crear = new CrearCuentasBancarias();
+            crear.Show();
+            this.Hide();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //Me tuve que ayudar con el chat porque sabia como agregar pero no como eliminar desde dataGrid
+
+            if (dataGridView1.CurrentCell != null)
+            {
+                int seleccion = dataGridView1.CurrentCellAddress.Y;
+                int idCuenta = (int)dataGridView1[0, seleccion].Value;
+                // Ahora, necesitas crear una instancia de CuentaBancaria con el ID
+                Back.CuentaBancaria cuenta = new Back.CuentaBancaria { Id = idCuenta };
+                principal.EliminarCuentaBancaria(cuenta);
+                ActualizarGridVie();
+            }
+            else
+            {
+                MessageBox.Show("Selecciona una casilla");
+            }
         }
     }
 }

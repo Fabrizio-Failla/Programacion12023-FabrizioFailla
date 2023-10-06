@@ -44,6 +44,8 @@
             label7 = new Label();
             label8 = new Label();
             dataGridView1 = new DataGridView();
+            button7 = new Button();
+            button8 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -196,11 +198,33 @@
             dataGridView1.Size = new Size(630, 202);
             dataGridView1.TabIndex = 34;
             // 
+            // button7
+            // 
+            button7.Location = new Point(155, 247);
+            button7.Name = "button7";
+            button7.Size = new Size(115, 42);
+            button7.TabIndex = 35;
+            button7.Text = "Emitir Tarjeta de Credito";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
+            // 
+            // button8
+            // 
+            button8.Location = new Point(287, 247);
+            button8.Name = "button8";
+            button8.Size = new Size(113, 42);
+            button8.TabIndex = 36;
+            button8.Text = "Eliminar Tarjetas de Credito";
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
+            // 
             // MenuTarjetaCredito
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(830, 360);
+            Controls.Add(button8);
+            Controls.Add(button7);
             Controls.Add(dataGridView1);
             Controls.Add(label8);
             Controls.Add(label7);
@@ -242,5 +266,7 @@
         private Label label7;
         private Label label8;
         private DataGridView dataGridView1;
+        private Button button7;
+        private Button button8;
     }
 }

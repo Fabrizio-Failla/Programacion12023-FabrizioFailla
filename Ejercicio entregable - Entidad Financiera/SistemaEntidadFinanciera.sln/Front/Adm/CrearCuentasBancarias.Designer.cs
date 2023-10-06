@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            listBox1 = new ListBox();
             button1 = new Button();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
@@ -40,22 +39,12 @@
             label7 = new Label();
             label8 = new Label();
             comboBox1 = new ComboBox();
-            button3 = new Button();
             button5 = new Button();
             SuspendLayout();
             // 
-            // listBox1
-            // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(267, 31);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(385, 214);
-            listBox1.TabIndex = 32;
-            // 
             // button1
             // 
-            button1.Location = new Point(132, 150);
+            button1.Location = new Point(153, 140);
             button1.Name = "button1";
             button1.Size = new Size(89, 50);
             button1.TabIndex = 31;
@@ -65,14 +54,14 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(114, 91);
+            textBox2.Location = new Point(135, 81);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(122, 23);
             textBox2.TabIndex = 29;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(114, 62);
+            textBox1.Location = new Point(135, 52);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(122, 23);
             textBox1.TabIndex = 28;
@@ -80,7 +69,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(128, 31);
+            label5.Location = new Point(149, 21);
             label5.Name = "label5";
             label5.Size = new Size(93, 15);
             label5.TabIndex = 27;
@@ -89,7 +78,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(48, 124);
+            label4.Location = new Point(69, 114);
             label4.Name = "label4";
             label4.Size = new Size(0, 15);
             label4.TabIndex = 26;
@@ -97,7 +86,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(0, 65);
+            label3.Location = new Point(21, 55);
             label3.Name = "label3";
             label3.Size = new Size(108, 15);
             label3.TabIndex = 25;
@@ -106,7 +95,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(56, 65);
+            label2.Location = new Point(77, 55);
             label2.Name = "label2";
             label2.Size = new Size(0, 15);
             label2.TabIndex = 24;
@@ -114,7 +103,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(62, 92);
+            label1.Location = new Point(83, 82);
             label1.Name = "label1";
             label1.Size = new Size(0, 15);
             label1.TabIndex = 23;
@@ -122,7 +111,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(26, 91);
+            label7.Location = new Point(47, 81);
             label7.Name = "label7";
             label7.Size = new Size(36, 15);
             label7.TabIndex = 36;
@@ -131,7 +120,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(32, 121);
+            label8.Location = new Point(53, 111);
             label8.Name = "label8";
             label8.Size = new Size(30, 15);
             label8.TabIndex = 37;
@@ -140,25 +129,15 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(114, 121);
+            comboBox1.Location = new Point(135, 111);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 23);
             comboBox1.TabIndex = 38;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
-            // button3
-            // 
-            button3.Location = new Point(413, 251);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 39;
-            button3.Text = "Eliminar";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
             // button5
             // 
-            button5.Location = new Point(12, 271);
+            button5.Location = new Point(21, 243);
             button5.Name = "button5";
             button5.Size = new Size(75, 23);
             button5.TabIndex = 40;
@@ -170,13 +149,11 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(679, 297);
+            ClientSize = new Size(316, 274);
             Controls.Add(button5);
-            Controls.Add(button3);
             Controls.Add(comboBox1);
             Controls.Add(label8);
             Controls.Add(label7);
-            Controls.Add(listBox1);
             Controls.Add(button1);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
@@ -192,7 +169,6 @@
         }
 
         #endregion
-        private ListBox listBox1;
         private Button button1;
         private TextBox textBox2;
         private TextBox textBox1;
@@ -204,7 +180,6 @@
         private Label label7;
         private Label label8;
         private ComboBox comboBox1;
-        private Button button3;
         private Button button5;
     }
 }

@@ -31,7 +31,7 @@ namespace Front
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MenuPrincipalDeAdm crear = new MenuPrincipalDeAdm();
+            menuCliente crear = new menuCliente();
             crear.Show();
             this.Hide();
         }
@@ -50,7 +50,7 @@ namespace Front
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            MenuPrincipalDeAdm crear = new MenuPrincipalDeAdm();
+            menuCliente crear = new menuCliente();
             crear.Show();
             this.Hide();
         }

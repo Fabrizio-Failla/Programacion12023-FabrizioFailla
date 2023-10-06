@@ -158,9 +158,10 @@ namespace Back
                 {
                     tarjeta.MontoDeuda -= monto;
                     context.SaveChanges();
-                    
+                    return "Se a pagado la deuda correctamente";
                 }
-                return "Se a pagado la deuda correctamente";
+                return "No tienes deudas";
+                
             }
             else
             {
