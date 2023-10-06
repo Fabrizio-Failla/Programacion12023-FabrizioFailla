@@ -58,10 +58,11 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(132, 23);
             textBox1.TabIndex = 0;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(586, 239);
+            textBox2.Location = new Point(579, 239);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(132, 23);
             textBox2.TabIndex = 1;
@@ -69,7 +70,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(363, 223);
+            label1.Location = new Point(359, 212);
             label1.Name = "label1";
             label1.Size = new Size(113, 15);
             label1.TabIndex = 2;
@@ -78,7 +79,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(603, 222);
+            label2.Location = new Point(598, 212);
             label2.Name = "label2";
             label2.Size = new Size(98, 15);
             label2.TabIndex = 3;
@@ -87,7 +88,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(537, 242);
+            label3.Location = new Point(530, 242);
             label3.Name = "label3";
             label3.Size = new Size(43, 15);
             label3.TabIndex = 4;
@@ -114,7 +115,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(615, 276);
+            button2.Location = new Point(609, 271);
             button2.Name = "button2";
             button2.Size = new Size(75, 38);
             button2.TabIndex = 7;
@@ -124,7 +125,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(155, 320);
+            button3.Location = new Point(177, 320);
             button3.Name = "button3";
             button3.Size = new Size(73, 38);
             button3.TabIndex = 11;
@@ -135,7 +136,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(27, 294);
+            label5.Location = new Point(33, 294);
             label5.Name = "label5";
             label5.Size = new Size(43, 15);
             label5.TabIndex = 10;
@@ -145,7 +146,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(109, 212);
+            label6.Location = new Point(134, 212);
             label6.Name = "label6";
             label6.Size = new Size(141, 15);
             label6.TabIndex = 9;
@@ -153,7 +154,7 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(109, 230);
+            textBox3.Location = new Point(124, 231);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(161, 23);
             textBox3.TabIndex = 8;
@@ -161,25 +162,25 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(109, 27);
+            dataGridView1.Location = new Point(177, 27);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(449, 165);
+            dataGridView1.Size = new Size(455, 165);
             dataGridView1.TabIndex = 14;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(0, 263);
+            label7.Location = new Point(-1, 263);
             label7.Name = "label7";
-            label7.Size = new Size(107, 15);
+            label7.Size = new Size(119, 15);
             label7.TabIndex = 16;
-            label7.Text = "Cuenta Destino(ID)";
+            label7.Text = "Numero de Cuenta D";
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(109, 260);
+            textBox4.Location = new Point(124, 260);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(161, 23);
             textBox4.TabIndex = 15;
@@ -189,13 +190,13 @@
             label8.AutoSize = true;
             label8.Location = new Point(0, 234);
             label8.Name = "label8";
-            label8.Size = new Size(103, 15);
+            label8.Size = new Size(118, 15);
             label8.TabIndex = 17;
-            label8.Text = "Cuenta Origen(ID)";
+            label8.Text = "Numero de cuenta O";
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(109, 291);
+            textBox5.Location = new Point(124, 291);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(161, 23);
             textBox5.TabIndex = 18;
@@ -213,7 +214,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(272, 9);
+            label9.Location = new Point(336, 9);
             label9.Name = "label9";
             label9.Size = new Size(93, 15);
             label9.TabIndex = 20;
@@ -221,7 +222,7 @@
             // 
             // button5
             // 
-            button5.Location = new Point(564, 123);
+            button5.Location = new Point(667, 110);
             button5.Name = "button5";
             button5.Size = new Size(79, 42);
             button5.TabIndex = 21;
@@ -231,7 +232,7 @@
             // 
             // button6
             // 
-            button6.Location = new Point(564, 46);
+            button6.Location = new Point(667, 38);
             button6.Name = "button6";
             button6.Size = new Size(79, 39);
             button6.TabIndex = 22;

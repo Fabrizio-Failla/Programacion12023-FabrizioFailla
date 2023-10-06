@@ -131,23 +131,22 @@ namespace Back
 
 
         }
-        public string RealizarTransferencia(int cuentaOrigenId, int cuentaDestinoId, double monto)
+        public string RealizarTransferencia(int cuentaOrigenNumero, int cuentaDestinoNumero, double monto)
         {
-            var cuentaOrigen = context.CuentaBancarias.Find(cuentaOrigenId);
-            var cuentaDestino = context.CuentaBancarias.Find(cuentaDestinoId);
+            var cuentaOrigen = context.CuentaBancarias.FirstOrDefault(c => c.NumeroCuenta == cuentaOrigenNumero);
+            var cuentaDestino = context.CuentaBancarias.FirstOrDefault(c => c.NumeroCuenta == cuentaDestinoNumero);
 
             if (cuentaOrigen != null && cuentaDestino != null && (cuentaOrigen.Saldo >= monto))
             {
                 cuentaOrigen.Saldo -= monto;
                 cuentaDestino.Saldo += monto;
                 context.SaveChanges();
-                return "La transferencia sea a realizado con exito";
+                return "La transferencia se ha realizado con éxito";
             }
             else
             {
-                return "No se a encontrado una de las cuentas o el saldo es inferior ";
+                return "No se ha encontrado una de las cuentas o el saldo es insuficiente";
             }
-            
         }
         public string PagarTarjetaCredito(int tarjetaId, double monto)
         {

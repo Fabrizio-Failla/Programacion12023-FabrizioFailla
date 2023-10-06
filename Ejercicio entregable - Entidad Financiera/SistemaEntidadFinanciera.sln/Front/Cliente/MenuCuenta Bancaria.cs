@@ -17,20 +17,27 @@ namespace Front
     {
         Principal principal = new Principal();
         ApplicationDbContext context = new ApplicationDbContext();
+
         private void ActualizarGridVie()
         {
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = principal.DevolverListaCuentaBancaria();
+
+
         }
         public MenuCuenta_Bancaria()
         {
             InitializeComponent();
+
+
         }
 
         private void MenuCuenta_Bancaria_Load(object sender, EventArgs e)
         {
             dataGridView1.ReadOnly = true;
+
             dataGridView1.DataSource = principal.DevolverListaCuentaBancaria();
+
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -113,14 +120,15 @@ namespace Front
         {
             if (textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "")
             {
-                MessageBox.Show("Complete el campo monto nuevamente.");
+                MessageBox.Show("Complete todos los campos.");
             }
             else
             {
-                int cuentaOrigenId = Convert.ToInt32(textBox3.Text);
-                int cuentaDestinoId = Convert.ToInt32(textBox4.Text);
+                int cuentaOrigenNumero = int.Parse(textBox3.Text);
+                int cuentaDestinoNumero = int.Parse(textBox4.Text);
                 double monto = double.Parse(textBox5.Text);
-                string mensaje = principal.RealizarTransferencia(cuentaOrigenId, cuentaDestinoId, monto);
+
+                string mensaje = principal.RealizarTransferencia(cuentaOrigenNumero, cuentaDestinoNumero, monto);
                 MessageBox.Show(mensaje);
                 ActualizarGridVie();
             }
@@ -158,6 +166,11 @@ namespace Front
             {
                 MessageBox.Show("Selecciona una casilla");
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
