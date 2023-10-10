@@ -33,7 +33,7 @@ namespace SistemaFinanciero2
                 string mensaje = principal.RealizarDeposito(textBox1.Text, double.Parse(textBox3.Text));
                 MessageBox.Show(mensaje);
                 textBox3.Clear();
-               
+
 
             }
         }
@@ -66,7 +66,22 @@ namespace SistemaFinanciero2
             }
             else
             {
-                string mensaje= principal.RealizarExtraccion(textBox1.Text, double.Parse(textBox3.Text));
+                string mensaje = principal.RealizarExtraccion(textBox1.Text, double.Parse(textBox3.Text));
+                MessageBox.Show(mensaje);
+                textBox3.Clear();
+
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "" || textBox2.Text == "")
+            {
+                MessageBox.Show("Ingrese la cuenta nuevamente.");
+            }
+            else
+            {
+                string mensaje = principal.RealizarTransferencia(textBox1.Text, textBox2.Text, double.Parse(textBox3.Text));
                 MessageBox.Show(mensaje);
                 textBox3.Clear();
 

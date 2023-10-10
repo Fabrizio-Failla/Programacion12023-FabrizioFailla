@@ -141,24 +141,32 @@ namespace Solucion
                 return "Cuenta no encontrada, ingrese nuevamente la cuenta";
             }
         }
-       /* public string RealizarTransferencia(int cuentaOrigenNumero, int cuentaDestinoNumero, double monto)
+        public string RealizarTransferencia(string cuentaOrigenNumero, string cuentaDestinoNumero, double monto)
         {
-            var cuentaOrigen = context.CuentaBancarias.FirstOrDefault(c => c.NumeroCuenta == cuentaOrigenNumero);
-            var cuentaDestino = context.CuentaBancarias.FirstOrDefault(c => c.NumeroCuenta == cuentaDestinoNumero);
+            CuentaBancaria? cuentaOrigen = context.CuentaBancarias.FirstOrDefault(c => c.NumeroCuenta == cuentaOrigenNumero);
+            CuentaBancaria? cuentaDestino = context.CuentaBancarias.FirstOrDefault(c => c.NumeroCuenta == cuentaDestinoNumero);
 
-            if (cuentaOrigen != null && cuentaDestino != null && (cuentaOrigen.Saldo >= monto))
+            if (cuentaOrigen != null && cuentaDestino != null)
             {
-                cuentaOrigen.Saldo -= monto;
-                cuentaDestino.Saldo += monto;
-                context.SaveChanges();
-                return "La transferencia se ha realizado con éxito";
+                if (cuentaOrigen.Saldo >= monto)
+                {
+                    cuentaOrigen.Saldo -= monto;
+                    cuentaDestino.Saldo += monto;
+                    context.SaveChanges();
+                    return "La transferencia se ha realizado con éxito";
+                }
+                else
+                {
+                    return "El dinero que deseas transferir es inferior al saldo de tu cuenta";
+                }
+
             }
             else
             {
-                return "No se ha encontrado una de las cuentas o el saldo es insuficiente";
+                return "No se ha encontrado una de las cuentas";
             }
-       
-        }*/
+
+        }
         public string PagarTarjetaCredito(int tarjetaId, double monto)
         {
             var tarjeta = context.TarjetaCreditos.Find(tarjetaId);

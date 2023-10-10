@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3tiEjLHFKQU6BpTUXPTSRntpJX80FSHWYbupUN4dnzwiOcyrxOfzaGs361V9KTzHiEEI8QEuosRii1VHSLu2bg==",
+  "dgSpecHash": "cqTKnR+GmFSy3p92Nry6uLu9cSRubWwbyfFGDVW9jPCetjtx35h7e56wSfEn57b2f6PQFHVf2z78ncDPyWAeGA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\54349\\source\\repos\\SistemaFinanciero2\\SistemaFinanciero2\\SistemaFinanciero2.csproj",
+  "projectFilePath": "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\SistemaFinanciero2\\SistemaFinanciero2\\SistemaFinanciero2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\54349\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\54349\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

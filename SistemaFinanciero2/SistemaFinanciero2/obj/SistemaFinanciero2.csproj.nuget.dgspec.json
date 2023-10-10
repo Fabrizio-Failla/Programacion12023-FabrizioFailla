@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\54349\\source\\repos\\SistemaFinanciero2\\SistemaFinanciero2\\SistemaFinanciero2.csproj": {}
+    "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\SistemaFinanciero2\\SistemaFinanciero2\\SistemaFinanciero2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\54349\\source\\repos\\SistemaFinanciero2\\SistemaFinanciero2\\SistemaFinanciero2.csproj": {
+    "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\SistemaFinanciero2\\SistemaFinanciero2\\SistemaFinanciero2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\54349\\source\\repos\\SistemaFinanciero2\\SistemaFinanciero2\\SistemaFinanciero2.csproj",
+        "projectUniqueName": "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\SistemaFinanciero2\\SistemaFinanciero2\\SistemaFinanciero2.csproj",
         "projectName": "SistemaFinanciero2",
-        "projectPath": "C:\\Users\\54349\\source\\repos\\SistemaFinanciero2\\SistemaFinanciero2\\SistemaFinanciero2.csproj",
+        "projectPath": "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\SistemaFinanciero2\\SistemaFinanciero2\\SistemaFinanciero2.csproj",
         "packagesPath": "C:\\Users\\54349\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\54349\\source\\repos\\SistemaFinanciero2\\SistemaFinanciero2\\obj\\",
+        "outputPath": "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\SistemaFinanciero2\\SistemaFinanciero2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\54349\\source\\repos\\SistemaFinanciero2\\Solucion\\Solucion.csproj": {
-                "projectPath": "C:\\Users\\54349\\source\\repos\\SistemaFinanciero2\\Solucion\\Solucion.csproj"
+              "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\SistemaFinanciero2\\Solucion\\Solucion.csproj": {
+                "projectPath": "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\SistemaFinanciero2\\Solucion\\Solucion.csproj"
               }
             }
           }
@@ -86,14 +86,14 @@
         }
       }
     },
-    "C:\\Users\\54349\\source\\repos\\SistemaFinanciero2\\Solucion\\Solucion.csproj": {
+    "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\SistemaFinanciero2\\Solucion\\Solucion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\54349\\source\\repos\\SistemaFinanciero2\\Solucion\\Solucion.csproj",
+        "projectUniqueName": "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\SistemaFinanciero2\\Solucion\\Solucion.csproj",
         "projectName": "Solucion",
-        "projectPath": "C:\\Users\\54349\\source\\repos\\SistemaFinanciero2\\Solucion\\Solucion.csproj",
+        "projectPath": "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\SistemaFinanciero2\\Solucion\\Solucion.csproj",
         "packagesPath": "C:\\Users\\54349\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\54349\\source\\repos\\SistemaFinanciero2\\Solucion\\obj\\",
+        "outputPath": "C:\\Users\\54349\\Documents\\GitHub\\Programacion12023-FabrizioFailla\\SistemaFinanciero2\\Solucion\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

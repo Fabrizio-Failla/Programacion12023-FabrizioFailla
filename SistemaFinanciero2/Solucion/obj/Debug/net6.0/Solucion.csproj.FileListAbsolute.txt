@@ -12,3 +12,17 @@ C:\Users\54349\source\repos\SistemaFinanciero2\Solucion\obj\Debug\net6.0\refint\
 C:\Users\54349\source\repos\SistemaFinanciero2\Solucion\obj\Debug\net6.0\Solucion.pdb
 C:\Users\54349\source\repos\SistemaFinanciero2\Solucion\obj\Debug\net6.0\Solucion.genruntimeconfig.cache
 C:\Users\54349\source\repos\SistemaFinanciero2\Solucion\obj\Debug\net6.0\ref\Solucion.dll
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\SistemaFinanciero2\Solucion\bin\Debug\net6.0\Solucion.deps.json
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\SistemaFinanciero2\Solucion\bin\Debug\net6.0\Solucion.runtimeconfig.json
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\SistemaFinanciero2\Solucion\bin\Debug\net6.0\Solucion.dll
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\SistemaFinanciero2\Solucion\bin\Debug\net6.0\Solucion.pdb
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\SistemaFinanciero2\Solucion\obj\Debug\net6.0\Solucion.csproj.AssemblyReference.cache
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\SistemaFinanciero2\Solucion\obj\Debug\net6.0\Solucion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\SistemaFinanciero2\Solucion\obj\Debug\net6.0\Solucion.AssemblyInfoInputs.cache
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\SistemaFinanciero2\Solucion\obj\Debug\net6.0\Solucion.AssemblyInfo.cs
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\SistemaFinanciero2\Solucion\obj\Debug\net6.0\Solucion.csproj.CoreCompileInputs.cache
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\SistemaFinanciero2\Solucion\obj\Debug\net6.0\Solucion.dll
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\SistemaFinanciero2\Solucion\obj\Debug\net6.0\refint\Solucion.dll
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\SistemaFinanciero2\Solucion\obj\Debug\net6.0\Solucion.pdb
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\SistemaFinanciero2\Solucion\obj\Debug\net6.0\Solucion.genruntimeconfig.cache
+C:\Users\54349\Documents\GitHub\Programacion12023-FabrizioFailla\SistemaFinanciero2\Solucion\obj\Debug\net6.0\ref\Solucion.dll
