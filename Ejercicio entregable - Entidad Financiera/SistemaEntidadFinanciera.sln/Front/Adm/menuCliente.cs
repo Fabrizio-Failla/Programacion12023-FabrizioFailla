@@ -28,6 +28,7 @@ namespace Front
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             Cliente nuevocliente = new Cliente();
             nuevocliente.Nombre = textBox1.Text;
             nuevocliente.Apellido = textBox2.Text;

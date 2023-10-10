@@ -12,6 +12,7 @@ namespace Back
         public List<Cliente> DevolverListaClientes()
         {
             return context.Clientes.ToList();
+            //return context.Clientes.Local.ToBindingList();
         }
         public List<CuentaBancaria> DevolverListaCuentaBancaria()
         {
