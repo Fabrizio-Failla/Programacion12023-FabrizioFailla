@@ -134,7 +134,7 @@ namespace Front
             if (dataGridView1.CurrentCell != null)
             {
                 int seleccion = dataGridView1.CurrentCellAddress.Y;
-                int idTarjeta = (int)dataGridView1[0, seleccion].Value;             
+                int idTarjeta = (int)dataGridView1[0, seleccion].Value;
                 Back.TarjetaCredito tarjeta = new Back.TarjetaCredito { Id = idTarjeta };
                 principal.Eliminartarjetas(tarjeta);
                 ActualizarGridVie();
@@ -143,6 +143,11 @@ namespace Front
             {
                 MessageBox.Show("Selecciona una casilla");
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
