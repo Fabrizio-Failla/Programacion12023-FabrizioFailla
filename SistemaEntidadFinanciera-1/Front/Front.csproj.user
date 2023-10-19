@@ -13,5 +13,8 @@
     <Compile Update="MenuPrincial.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="TarjetadeCredito.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

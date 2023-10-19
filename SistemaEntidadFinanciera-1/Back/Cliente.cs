@@ -12,6 +12,10 @@ namespace Back
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public int Dni { get; set; }
+        public string info_list_box
+        {
+            get { return $" ID: {Id}. Nombre: {Nombre}. Apellido: {Apellido}.DNI {Dni}."; }
+        }
 
     }
 }

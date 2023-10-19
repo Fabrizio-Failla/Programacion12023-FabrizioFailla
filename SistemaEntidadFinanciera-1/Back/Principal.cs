@@ -207,14 +207,14 @@ namespace Back
 
         }
 
-        public string GenerarResumenTarjeta(int tarjetaID)
+        public string GenerarResumenTarjeta(string NumeroTarjeta)
         {
-            var resumen = context.TarjetadeCreditos.Find(tarjetaID);
+            TarjetaCredito? resumen = context.TarjetadeCreditos.FirstOrDefault(c => c.NumeroTarjeta== NumeroTarjeta);
             if (resumen != null)
             {
-                return $"Resumen de Tarjeta de Crédito.Número de Tarjeta:{resumen.NumeroTarjeta}, Saldo Disponible:{resumen.SaldoDisponible}. Limite de Crédito:{resumen.LimiteCredito}.Estado {resumen.Estado}.";
+                return $"Numero de Tarjeta:{resumen.NumeroTarjeta}, Saldo Disponible:${resumen.SaldoDisponible}.Monto adeudado {resumen.MontoDeuda}. Limite de Crédito:{resumen.LimiteCredito}.Estado {resumen.Estado}.";
             }
-            else { return "selecciona algo"; }
+            else { return "Tarjeta no encontrada"; }
 
         }
         public string GenerarResumenCuenta(string NumeroCuenta)

@@ -15,6 +15,6 @@ namespace Back
         public double SaldoDisponible { get; set; }
         public string Estado { get; set; }
         public double MontoDeuda { get; set; }
-        public CuentaBancaria Propietario { get; set; }
+        public Cliente Propietario { get; set; }
     }
 }

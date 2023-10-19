@@ -41,12 +41,15 @@
             textBox1 = new TextBox();
             button2 = new Button();
             button1 = new Button();
+            label6 = new Label();
+            textBox4 = new TextBox();
+            button6 = new Button();
             SuspendLayout();
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(59, 232);
+            label5.Location = new Point(336, 219);
             label5.Name = "label5";
             label5.Size = new Size(122, 15);
             label5.TabIndex = 26;
@@ -54,7 +57,7 @@
             // 
             // button5
             // 
-            button5.Location = new Point(68, 250);
+            button5.Location = new Point(345, 237);
             button5.Name = "button5";
             button5.Size = new Size(100, 34);
             button5.TabIndex = 25;
@@ -159,11 +162,40 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(179, 219);
+            label6.Name = "label6";
+            label6.Size = new Size(85, 15);
+            label6.TabIndex = 28;
+            label6.Text = "Ingresar tarjeta";
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(158, 240);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(120, 23);
+            textBox4.TabIndex = 27;
+            // 
+            // button6
+            // 
+            button6.Location = new Point(179, 269);
+            button6.Name = "button6";
+            button6.Size = new Size(85, 34);
+            button6.TabIndex = 29;
+            button6.Text = "Ingresar";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
             // MenuCuentaBancaria
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(638, 315);
+            Controls.Add(button6);
+            Controls.Add(label6);
+            Controls.Add(textBox4);
             Controls.Add(label5);
             Controls.Add(button5);
             Controls.Add(label4);
@@ -198,5 +230,8 @@
         private TextBox textBox1;
         private Button button2;
         private Button button1;
+        private Label label6;
+        private TextBox textBox4;
+        private Button button6;
     }
 }

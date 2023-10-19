@@ -33,22 +33,20 @@
             textBox3 = new TextBox();
             label5 = new Label();
             label2 = new Label();
-            label1 = new Label();
             label7 = new Label();
             comboBox1 = new ComboBox();
             button2 = new Button();
             textBox2 = new TextBox();
-            textBox1 = new TextBox();
             label3 = new Label();
             button1 = new Button();
-            dataGridView1 = new DataGridView();
             button3 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            label1 = new Label();
+            listBox1 = new ListBox();
             SuspendLayout();
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(112, 193);
+            textBox4.Location = new Point(111, 161);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(99, 23);
             textBox4.TabIndex = 54;
@@ -56,7 +54,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(11, 196);
+            label6.Location = new Point(10, 164);
             label6.Name = "label6";
             label6.Size = new Size(95, 15);
             label6.TabIndex = 53;
@@ -64,7 +62,7 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(112, 160);
+            textBox3.Location = new Point(111, 128);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(99, 23);
             textBox3.TabIndex = 52;
@@ -72,7 +70,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(55, 225);
+            label5.Location = new Point(54, 193);
             label5.Name = "label5";
             label5.Size = new Size(42, 15);
             label5.TabIndex = 51;
@@ -81,25 +79,16 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(7, 163);
+            label2.Location = new Point(6, 131);
             label2.Name = "label2";
             label2.Size = new Size(99, 15);
             label2.TabIndex = 50;
             label2.Text = "Monto adeudado";
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(0, 101);
-            label1.Name = "label1";
-            label1.Size = new Size(108, 15);
-            label1.TabIndex = 49;
-            label1.Text = "Numero de Cuenta";
-            // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(8, 134);
+            label7.Location = new Point(7, 102);
             label7.Name = "label7";
             label7.Size = new Size(98, 15);
             label7.TabIndex = 48;
@@ -108,7 +97,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(112, 222);
+            comboBox1.Location = new Point(111, 190);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(99, 23);
             comboBox1.TabIndex = 47;
@@ -116,31 +105,25 @@
             // 
             // button2
             // 
-            button2.Location = new Point(0, 315);
+            button2.Location = new Point(12, 254);
             button2.Name = "button2";
             button2.Size = new Size(75, 30);
             button2.TabIndex = 46;
             button2.Text = "Regresar";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(112, 131);
+            textBox2.Location = new Point(111, 99);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(99, 23);
             textBox2.TabIndex = 45;
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(112, 98);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(99, 23);
-            textBox1.TabIndex = 44;
-            // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(124, 68);
+            label3.Location = new Point(71, 23);
             label3.Name = "label3";
             label3.Size = new Size(79, 15);
             label3.TabIndex = 43;
@@ -148,7 +131,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(112, 251);
+            button1.Location = new Point(111, 219);
             button1.Name = "button1";
             button1.Size = new Size(99, 26);
             button1.TabIndex = 42;
@@ -156,48 +139,56 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(217, 12);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(699, 305);
-            dataGridView1.TabIndex = 55;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
             // button3
             // 
-            button3.Location = new Point(922, 12);
+            button3.Location = new Point(329, 190);
             button3.Name = "button3";
-            button3.Size = new Size(73, 44);
+            button3.Size = new Size(172, 38);
             button3.TabIndex = 56;
-            button3.Text = "Bloquear\r\nTarjeta\r\n";
+            button3.Text = "Aministrar Tarjetas de Credito\r\n";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(95, 53);
+            label1.Name = "label1";
+            label1.Size = new Size(145, 30);
+            label1.TabIndex = 57;
+            label1.Text = "Seleccionar Cliente al que \r\ndeseas emitirle una tarjeta";
+            // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 15;
+            listBox1.Location = new Point(246, 15);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(349, 169);
+            listBox1.TabIndex = 58;
             // 
             // EmitarTarjeta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1007, 346);
+            ClientSize = new Size(641, 346);
+            Controls.Add(listBox1);
+            Controls.Add(label1);
             Controls.Add(button3);
-            Controls.Add(dataGridView1);
             Controls.Add(textBox4);
             Controls.Add(label6);
             Controls.Add(textBox3);
             Controls.Add(label5);
             Controls.Add(label2);
-            Controls.Add(label1);
             Controls.Add(label7);
             Controls.Add(comboBox1);
             Controls.Add(button2);
             Controls.Add(textBox2);
-            Controls.Add(textBox1);
             Controls.Add(label3);
             Controls.Add(button1);
             Name = "EmitarTarjeta";
             Text = "EmitarTarjeta";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += EmitarTarjeta_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -209,15 +200,14 @@
         private TextBox textBox3;
         private Label label5;
         private Label label2;
-        private Label label1;
         private Label label7;
         private ComboBox comboBox1;
         private Button button2;
         private TextBox textBox2;
-        private TextBox textBox1;
         private Label label3;
         private Button button1;
-        private DataGridView dataGridView1;
         private Button button3;
+        private Label label1;
+        private ListBox listBox1;
     }
 }

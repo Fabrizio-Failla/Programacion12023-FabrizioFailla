@@ -81,5 +81,21 @@ namespace Front
 
             }
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if(textBox4.Text ==null)
+            {
+                MessageBox.Show("Ingrese Numero de tarjeta.");
+
+            }
+            else
+            {
+                string mensaje = principal.GenerarResumenCuenta(textBox4.Text);
+                MessageBox.Show(mensaje);
+                textBox4.Clear();
+            }
+
+        }
     }
 }
