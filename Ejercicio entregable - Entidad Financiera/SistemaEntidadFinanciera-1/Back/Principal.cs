@@ -26,34 +26,8 @@ namespace Back
             context.Clientes.Add(cliente);
             context.SaveChanges();
         }
-        public void EliminarCLiente(Cliente cliente)
-        {
-            var clienteEncontrado = context.Clientes.Find(cliente.Id);
-            if (clienteEncontrado != null)
-            {
-                context.Clientes.Remove(clienteEncontrado);
-                context.SaveChanges();
-            }
-        }
-        public void Eliminartarjetas(TarjetaCredito tarjetaCredito)
-        {
-            var tarjetaEncontrada = context.TarjetadeCreditos.Find(tarjetaCredito.Id);
-            if (tarjetaEncontrada != null)
-            {
-                context.TarjetadeCreditos.Remove(tarjetaEncontrada);
-                context.SaveChanges();
-            }
-        }
-
-        public void EliminarCuentaBancaria(CuentaBancaria cuentaBancaria)
-        {
-            var cuentaEncontrada = context.CuentaBancarias.Find(cuentaBancaria.Id);
-            if (cuentaEncontrada != null)
-            {
-                context.CuentaBancarias.Remove(cuentaEncontrada);
-                context.SaveChanges();
-            }
-        }
+        
+       
         public void CrearCuentaBancaria(CuentaBancaria cuenta)
         {
             context.CuentaBancarias.Add(cuenta);
@@ -61,12 +35,6 @@ namespace Back
 
         }
 
-        /*public bool ObtenerClientePorDNI(int DNI)
-        {
-            var clienteEncontrado = context.Clientes.Find(DNI);
-            return clienteEncontrado != null;
-
-        }*/
         public string GenerarNumeroTarjeta()
         {
             Random random = new Random();
