@@ -62,6 +62,7 @@
             button5.TabIndex = 25;
             button5.Text = "Obtener Tarjeta";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // label4
             // 

@@ -99,5 +99,10 @@ namespace Front
         {
             this.Close();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Gracias por pedir tu tarjeta.");
+        }
     }
 }

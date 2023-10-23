@@ -54,7 +54,7 @@ namespace Front
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MenuAltaCuentaBancaria menu = new MenuAltaCuentaBancaria();
+            MenuCuentaBancaria menu = new MenuCuentaBancaria();
             menu.Show();
             this.Hide();
         }
